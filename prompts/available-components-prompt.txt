@@ -1,0 +1,36 @@
+You MUST ONLY use the following verified Blade components from the `x-base` namespace. Do not invent new components like `card-grid` or `feature-list`.
+
+Available `x-base` components:
+- `content-section`
+- `cta-section`
+- `features-grid`
+- `footer`
+- `google-map`
+- `header`
+- `hero-section`
+- `image-grid`
+- `image-hero-section`
+- `mobile-menu-script`
+- `nav-dropdown`
+- `post-card`
+- `pricing-section`
+- `promotions-section`
+- `services-section`
+- `store-finder`
+
+IMPORTANT VARIABLE SAFETY RULES:
+1. Always declare variables in @php blocks at the top of Blade files
+2. Use null coalescing operator (??) for all variables that might be undefined
+3. Initialize arrays as empty arrays: $variable = $variable ?? [];
+4. Filter arrays to remove null values: $variable = array_filter($variable);
+5. Initialize strings as empty strings: $variable = $variable ?? '';
+6. For URLs/links, provide safe defaults: $cta_link = $cta_link ?? '#';
+7. Never reference variables without first checking they exist or providing defaults
+
+EXAMPLE DEFENSIVE PATTERN:
+@php
+$services = $services ?? [];
+$services = array_filter($services);
+$business_name = $business_name ?? '';
+$hero_title = $hero_title ?? 'Welcome';
+@endphp

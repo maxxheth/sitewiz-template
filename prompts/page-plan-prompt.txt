@@ -1,0 +1,56 @@
+{
+  "foundation": [
+    {
+      "name": "index",
+      "title": "Home",
+      "type": "blade"
+    },
+    {
+      "name": "about",
+      "title": "About Us",
+      "type": "blade"
+    },
+    {
+      "name": "services",
+      "title": "Our Services",
+      "type": "blade"
+    },
+    {
+      "name": "contact",
+      "title": "Contact Us",
+      "type": "blade"
+    },
+    {
+      "name": "404",
+      "title": "Page Not Found",
+      "type": "blade"
+    }
+  ],
+  "additional": [
+    {
+      "name": "services/hvac",
+      "title": "HVAC Services",
+      "type": "blade"
+    },
+    {
+      "name": "services/plumbing",
+      "title": "Plumbing Services",
+      "type": "blade"
+    },
+    {
+      "name": "services/electrical",
+      "title": "Electrical Services",
+      "type": "blade"
+    },
+    {
+      "name": "locations/new-york",
+      "title": "New York Location",
+      "type": "blade"
+    },
+    {
+      "name": "locations/los-angeles",
+      "title": "Los Angeles Location",
+      "type": "blade"
+    }
+  ]
+}

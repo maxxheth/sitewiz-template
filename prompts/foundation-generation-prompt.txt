@@ -1,0 +1,143 @@
+````plaintext
+````plaintext
+````plaintext
+ROLE: Generate ONLY the foundational pages using HydePHP Blade and verified x-base.* components.
+
+CRITICAL RULES:
+1.  Every page MUST include `<x-base.header />` and `<x-base.footer />` inside the `@section('content')`. This is mandatory.
+2.  **Component Data Contracts:** You MUST adhere to the following data structures when passing arrays as props. This is a hard requirement to prevent errors.
+    -   **`<x-base.header>` (top navigation `:navItems`):**
+        -   The `:navItems` prop MUST be an array of arrays.
+        -   Each inner array MUST include the keys `'key'`, `'text'`, and `'url'`.
+        -   Reserved keys: use `'services'` for the Services overview and `'locations'` for the Locations overview when applicable.
+        -   Correct example (includes required 'key' on every item):
+            `:navItems="[['key' => 'home', 'text' => 'Home', 'url' => '/'], ['key' => 'services', 'text' => 'Services', 'url' => '/services'], ['key' => 'locations', 'text' => 'Locations', 'url' => '/locations'], ['key' => 'about', 'text' => 'About Us', 'url' => '/about'], ['key' => 'contact', 'text' => 'Contact Us', 'url' => '/contact']]"`
+        -   WRONG example (DO NOT OUTPUT — missing 'key' causes PHP error):
+            `:navItems="[['text' => 'Home','url' => '/'], ['text' => 'Services','url' => '/services'], ['text' => 'Locations','url' => '/locations'], ['text' => 'About Us','url' => '/about'], ['text' => 'Contact Us','url' => '/contact']]"`
+
+    -   **`<x-base.header>` and `<x-base.nav-dropdown>`:**
+        -   The `:serviceNavItems` and `:locationNavItems` props MUST be an array of arrays.
+        -   Each inner array MUST have 'text' and 'url' keys.
+        -   **Correct Example:** `:serviceNavItems="[['text' => 'HVAC Repair', 'url' => '/services/hvac-repair']]"`
+
+    -   **`<x-base.services-section>`:**
+        -   The `:services` prop MUST be an array of arrays.
+        -   Each inner array MUST use the key **'title'** for the service name. Other valid keys are 'description', 'image', 'url', and 'features' (which is an array of strings).
+        -   **Correct Example:** `:services="[['title' => 'AC Repair', 'description' => '...', 'url' => '/services/ac-repair']]"`
+        -   **Incorrect Key:** Do NOT use 'name' for the service title.
+    -   **`<x-base.footer>`:**
+        -   The `:socialLinks` prop MUST be an array of arrays.
+        -   Each inner array MUST have 'name', 'url', and 'icon' keys.
+        -   **Correct Example:** `:socialLinks="[['name' => 'Facebook', 'url' => '...', 'icon' => '...']]"`
+3.  **Component Data Binding:** You MUST use the provided BUSINESS INFORMATION to populate the props for the header and footer on EVERY page.
+4.  **Linking Rule:** To avoid orphaned pages, every new page you create MUST be linked from a relevant existing page. You MUST include the updated content for the linking page in your `delimited_content` output.
+5.  Use `@extends('layouts.app')` and `@section('content')` for every page.
+6.  Use "PAGE: <name>" headers and "===" as delimiters.
+7.  Use ONLY the verified components listed. Do not invent components.
+8.  Use Tailwind CSS utility classes for all styling. Do NOT use daisyUI classes.
+
+**CRITICAL FOOTER INSTRUCTIONS:**
+When generating ANY page that includes the `<x-base.footer>` component, you MUST populate it with the correct business details. Do not leave it empty or use default values.
+
+You must provide the following props, deriving the values from the business context provided:
+- `businessName`: The name of the business.
+- `address`: The full street address.
+- `city`: The city from the address.
+- `state`: The state from the address.
+- `phone`: The business phone number.
+- `email`: The business email address.
+
+**Correct Example:**
+```html
+<x-base.footer
+    businessName="Plano Air Comfort"
+    address="123 Comfort Lane, Plano, TX 75093"
+    city="Plano"
+    state="TX"
+    phone="1-800-555-HVAC"
+    email="service@planoaircomfort.com"
+    :serviceLinks="..."
+    :locationLinks="..."
+    :socialLinks="..."
+/>
+```
+
+**Incorrect Example (DO NOT DO THIS):**
+```html
+<x-base.footer />
+```
+
+This rule is mandatory for all foundation pages (index, about, contact, etc.).
+
+VALIDATION SAFEGUARDS (MANDATORY):
+- Before outputting or transforming `:navItems`, ensure every element includes `'key'`, `'text'`, and `'url'`. Never access `$i['key']` without checking it exists.
+- When filtering or mapping, confirm each `$i` is an array and contains required keys.
+
+/// Explicit PHP validation and normalization example (put inside your Blade/component before using $navItems):
+```php
+<?php
+// Ensure $navItems is an array
+$navItems = is_array($navItems ?? null) ? $navItems : [];
+
+// Normalize: coerce each item to have 'key','text','url' or drop it safely.
+// If 'key' is missing but 'text' exists, derive a slug as a fallback 'key'.
+$navItems = array_values(array_filter(array_map(function ($i) {
+    if (!is_array($i)) return null;
+
+    // Derive 'key' from 'text' if missing (slugify basic ASCII)
+    if (!isset($i['key']) && isset($i['text'])) {
+        $slug = strtolower(trim(preg_replace('/[^a-z0-9]+/i', '-', $i['text']), '-'));
+        $i['key'] = $slug !== '' ? $slug : null;
+    }
+
+    // Require all keys
+    if (!isset($i['key'], $i['text'], $i['url'])) return null;
+
+    return $i;
+}, $navItems)));
+
+// Safely build a top-level nav excluding Services/Locations overview links
+$topNav = array_values(array_filter($navItems, function ($i) {
+    return is_array($i)
+        && isset($i['key'], $i['text'], $i['url'])
+        && !in_array($i['key'], ['services', 'locations'], true);
+}));
+
+// Optional: split out dropdown sources safely
+$serviceNavItems = array_values(array_filter($navItems, fn($i) => is_array($i) && isset($i['key']) && $i['key'] === 'services'));
+$locationNavItems = array_values(array_filter($navItems, fn($i) => is_array($i) && isset($i['key']) && $i['key'] === 'locations'));
+
+// Safe access pattern when iterating
+foreach ($navItems as $i) {
+    $key  = (is_array($i) && array_key_exists('key', $i)) ? $i['key'] : null;
+    $text = (is_array($i) && array_key_exists('text', $i)) ? $i['text'] : '';
+    $url  = (is_array($i) && array_key_exists('url', $i)) ? $i['url'] : '#';
+    // use $key, $text, $url safely
+}
+```
+OUTPUT: Call `generateMultipleHydePages` with the built `delimited_content`.
+```
+```plaintext
+// REPLACEMENT NOTE:
+// %BG_IMG_URL% is deprecated. Use hero image placeholder format below.
+//
+// HERO IMAGE PLACEHOLDER SPEC:
+// Derive a hero image filename by:
+//  1. Take the page title (or logical page name if no explicit title)
+//  2. Lowercase it
+//  3. Replace any non alphanumeric characters with hyphens
+//  4. Collapse repeated hyphens
+//  5. Trim leading/trailing hyphens
+//  6. Append: _hero_img.png
+//  7. Embed as: %HERO_IMG_BEGIN_{filename}_HERO_IMG_END%
+//
+// Wherever a hero/background image URL would have been inserted (previously %BG_IMG_URL%),
+// insert ONLY the placeholder token above (not a real path). Example:
+//   %HERO_IMG_BEGIN_about-our-services_hero_img.png_HERO_IMG_END%
+//
+// The backend will later replace this by generating the image and saving it to:
+//   {site_id}/_media/imgs/{filename}
+//
+// REQUIREMENT: Do not output raw image URLs, only the placeholder tokens as specified.
+// ...existing code...
+```
