@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gaming Blog</title>
+
+    
+
+            
+        <link rel="stylesheet" href="media/app.css">
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/badger-accordion@1.2.4/dist/badger-accordion.css">
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+     
+</head>
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+
+    
+
+    
+    <main class="flex-grow">
+            <!-- Header & Navigation -->
+    <!-- Header using Tailwind/daisyUI semantic colors only -->
+<header class="sticky top-0 z-50 bg-primary-inverted shadow-lg font-sans">
+    <div class="container flex justify-between items-center px-4 py-4 mx-auto">
+        <!-- Logo -->
+        <div class="text-2xl font-extrabold uppercase text-primary-500">
+            <a href="/" class="flex items-center">
+                <span class="text-primary-500">CI</span><span class="text-neutral-900">WEB</span><span class="text-neutral-400">GROUP</span>
+            </a>
+        </div>
+
+        <!-- Centered Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 bg-surface-secondary px-4 py-2 rounded-lg shadow-md bg-neutral-50">
+            
+                            <a href="/"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Home
+                </a>
+                            <a href="/about"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    About
+                </a>
+                            <a href="/blog"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Blog
+                </a>
+                            <a href="/reviews"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Reviews
+                </a>
+                            <a href="/contact-us"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Contact
+                </a>
+            
+            
+            <div class="relative inline-block" id="dd-68a8befca7bee" data-dropdown-root>
+    <button
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-2 font-semibold text-font-primary transition hover:text-indigo-600"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dd-68a8befca7bee-menu"
+        data-dropdown-button
+    >
+        Services
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <div
+        id="dd-68a8befca7bee-menu"
+        class="absolute z-50 mt-2 min-w-56 left-0 rounded-md border border-gray-200 bg-white shadow-lg origin-top transform transition ease-out duration-150 hidden opacity-0 scale-95"
+        role="menu"
+        aria-hidden="true"
+        data-dropdown-menu
+    >
+        <nav class="py-2">
+                            <a href="/services/consulting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Consulting
+                </a>
+                            <a href="/services/development" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Development
+                </a>
+                            <a href="/services/design" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Design
+                </a>
+                            <a href="/services/marketing" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Marketing
+                </a>
+                    </nav>
+    </div>
+</div>
+
+<script>
+(function() {
+  var root = document.getElementById('dd-68a8befca7bee');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-dropdown-button]');
+  var menu = root.querySelector('[data-dropdown-menu]');
+  if (!btn || !menu) return;
+
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', v ? 'false' : 'true');
+    menu.classList.toggle('hidden', !v);
+    menu.classList.toggle('opacity-0', !v);
+    menu.classList.toggle('scale-95', !v);
+    menu.classList.toggle('opacity-100', v);
+    menu.classList.toggle('scale-100', v);
+  }
+  // Ensure initial hidden state and transition classes
+  menu.classList.add('opacity-0','scale-95','hidden');
+  menu.classList.remove('opacity-100','scale-100');
+  setOpen(false);
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    setOpen(!open);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!root.contains(e.target)) setOpen(false);
+  });
+
+  // Keyboard: Escape closes; ArrowDown opens and focuses first item
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      setOpen(true);
+      var first = menu.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+  });
+  menu.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();
+</script>
+            
+            <div class="relative inline-block" id="dd-68a8befca7c1c" data-dropdown-root>
+    <button
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-2 font-semibold text-font-primary transition hover:text-indigo-600"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dd-68a8befca7c1c-menu"
+        data-dropdown-button
+    >
+        Locations
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <div
+        id="dd-68a8befca7c1c-menu"
+        class="absolute z-50 mt-2 min-w-56 left-0 rounded-md border border-gray-200 bg-white shadow-lg origin-top transform transition ease-out duration-150 hidden opacity-0 scale-95"
+        role="menu"
+        aria-hidden="true"
+        data-dropdown-menu
+    >
+        <nav class="py-2">
+                            <a href="/locations/new-york" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    New York
+                </a>
+                            <a href="/locations/los-angeles" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Los Angeles
+                </a>
+                            <a href="/locations/chicago" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Chicago
+                </a>
+                            <a href="/locations/houston" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Houston
+                </a>
+                    </nav>
+    </div>
+</div>
+
+<script>
+(function() {
+  var root = document.getElementById('dd-68a8befca7c1c');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-dropdown-button]');
+  var menu = root.querySelector('[data-dropdown-menu]');
+  if (!btn || !menu) return;
+
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', v ? 'false' : 'true');
+    menu.classList.toggle('hidden', !v);
+    menu.classList.toggle('opacity-0', !v);
+    menu.classList.toggle('scale-95', !v);
+    menu.classList.toggle('opacity-100', v);
+    menu.classList.toggle('scale-100', v);
+  }
+  // Ensure initial hidden state and transition classes
+  menu.classList.add('opacity-0','scale-95','hidden');
+  menu.classList.remove('opacity-100','scale-100');
+  setOpen(false);
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    setOpen(!open);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!root.contains(e.target)) setOpen(false);
+  });
+
+  // Keyboard: Escape closes; ArrowDown opens and focuses first item
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      setOpen(true);
+      var first = menu.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+  });
+  menu.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();
+</script>        </nav>
+
+        <!-- Action button -->
+                    <a href="#contact" class="text-font-primary bg-surface-brand-primary px-8 py-3 font-bold uppercase hover:bg-accent-600 rounded-md">
+                Contact Us Today
+            </a>
+        
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+            <button id="menu-btn" class="text-neutral-900 focus:outline-none">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-neutral-50">
+        <nav class="flex flex-col items-center py-4 space-y-4">
+            
+                            <a href="/" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Home
+                </a>
+                            <a href="/about" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    About
+                </a>
+                            <a href="/blog" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Blog
+                </a>
+                            <a href="/reviews" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Reviews
+                </a>
+                            <a href="/contact-us" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Contact
+                </a>
+            
+            
+                            <div class="w-11/12 mt-2">
+                    <div class="px-4 py-2 text-xs font-bold uppercase tracking-wide opacity-70">Services</div>
+                                            <a href="/services/consulting" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Consulting</a>
+                                            <a href="/services/development" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Development</a>
+                                            <a href="/services/design" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Design</a>
+                                            <a href="/services/marketing" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Marketing</a>
+                                    </div>
+                                        <div class="w-11/12 mt-2">
+                    <div class="px-4 py-2 text-xs font-bold uppercase tracking-wide opacity-70">Locations</div>
+                                            <a href="/locations/new-york" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">New York</a>
+                                            <a href="/locations/los-angeles" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Los Angeles</a>
+                                            <a href="/locations/chicago" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Chicago</a>
+                                            <a href="/locations/houston" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Houston</a>
+                                    </div>
+            
+                            <a href="#contact" class="w-11/12 mt-4 px-4 py-2 text-center font-bold bg-accent-500 text-white hover:bg-accent-600 rounded-md">
+                    Contact Us Today
+                </a>
+                    </nav>
+    </div>
+</header>
+
+    <main class="py-16">
+        <!-- Hero Section -->
+        <!-- Enhanced Hero Section using custom Tailwind semantic color classes -->
+<section class="relative px-4 py-20 md:py-32 text-font-primary bg-surface-secondary font-sans">
+    <div class="container mx-auto relative z-10 text-left">
+        <div class="max-w-3xl">
+            <h1 class="mb-4 text-4xl font-extrabold leading-tight uppercase md:text-6xl text-primary-content">
+                Gaming Blog
+            </h1>
+            <p class="mb-8 text-lg md:text-xl text-accent-500">
+                Stay updated with the latest gaming news, tips, and community stories from the world of competitive gaming.
+            </p>
+        </div>
+
+                    <div class="mt-8 ">
+                <a href="/services" class="inline-block px-8 py-3 font-bold uppercase bg-surface-brand-primary text-accent-content rounded-md transition-colors hover:bg-accent-700">
+                    Our Services
+                </a>
+            </div>
+            </div>
+</section>
+
+        <!-- Blog Posts Section -->
+        <section class="py-16">
+            <div class="container px-4 mx-auto">
+                <h2 class="mb-12 text-3xl font-bold text-center text-[var(--text-primary)] md:text-4xl">Latest Posts</h2>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Blog Post Card using custom Tailwind semantic color classes -->
+<div class="overflow-hidden border-t-4 transition-shadow duration-300 group hover:shadow-xl bg-[var(--surface-secondary)] border-accent-600 rounded-lg shadow-lg font-sans">
+    <a href="#" target="_self" class="block">
+                    <img src="https://placehold.co/600x400/111827/dc2626?text=Gaming+Trends" alt="Top 10 Gaming Trends for 2024" class="w-full h-48 object-cover rounded-t-lg">
+        
+        <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--surface-brand-primary)]">
+                Top 10 Gaming Trends for 2024
+            </h3>
+
+                            <p class="text-[var(--text-secondary)] mb-4">
+                    Discover the latest gaming trends that are shaping the industry this year.
+                </p>
+            
+                            <div class="text-sm text-neutral-500 mt-4">
+                                            <span>By Alex Chen</span>
+                                                                <span> • 2024-01-15</span>
+                                                        </div>
+                    </div>
+    </a>
+</div>
+                    <!-- Blog Post Card using custom Tailwind semantic color classes -->
+<div class="overflow-hidden border-t-4 transition-shadow duration-300 group hover:shadow-xl bg-[var(--surface-secondary)] border-accent-600 rounded-lg shadow-lg font-sans">
+    <a href="#" target="_self" class="block">
+                    <img src="https://placehold.co/600x400/111827/dc2626?text=VR+Gaming" alt="VR Gaming: The Future is Here" class="w-full h-48 object-cover rounded-t-lg">
+        
+        <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--surface-brand-primary)]">
+                VR Gaming: The Future is Here
+            </h3>
+
+                            <p class="text-[var(--text-secondary)] mb-4">
+                    Explore how virtual reality is revolutionizing the gaming experience.
+                </p>
+            
+                            <div class="text-sm text-neutral-500 mt-4">
+                                            <span>By Sarah Williams</span>
+                                                                <span> • 2024-01-10</span>
+                                                        </div>
+                    </div>
+    </a>
+</div>
+                    <!-- Blog Post Card using custom Tailwind semantic color classes -->
+<div class="overflow-hidden border-t-4 transition-shadow duration-300 group hover:shadow-xl bg-[var(--surface-secondary)] border-accent-600 rounded-lg shadow-lg font-sans">
+    <a href="#" target="_self" class="block">
+                    <img src="https://placehold.co/600x400/111827/dc2626?text=Gaming+Setup" alt="Building Your Ultimate Gaming Setup" class="w-full h-48 object-cover rounded-t-lg">
+        
+        <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--surface-brand-primary)]">
+                Building Your Ultimate Gaming Setup
+            </h3>
+
+                            <p class="text-[var(--text-secondary)] mb-4">
+                    Tips and tricks for creating the perfect gaming environment at home.
+                </p>
+            
+                            <div class="text-sm text-neutral-500 mt-4">
+                                            <span>By Mike Johnson</span>
+                                                                <span> • 2024-01-05</span>
+                                                        </div>
+                    </div>
+    </a>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer using Tailwind/daisyUI semantic colors only -->
+<footer class="py-12 px-4 text-font-primary bg-primary-inverted font-sans">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="md:col-span-2 lg:col-span-1 block">
+                <h3 class="text-2xl font-extrabold mb-2 uppercase">Cyberia Gaming Lounge</h3>
+                                    <p class="text-sm">123 Gaming Street, Cyber City, CC 12345</p>
+                                                    <p class="text-sm">+1 (555) 123-4567</p>
+                
+                <div class="w-full flex justify-center mt-4">
+    <iframe
+        width="600"
+        height="450"
+        class="rounded-lg shadow-lg border border-[var(--border-tretinary)]"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUIz4JfDWIGqKZDi0YRmZy_lBFzgeAav8&q=123+Gaming+Street%2C+Cyber+City%2C+CC+12345">
+    </iframe>
+</div>
+                                    <div class="flex space-x-3">
+                                                    <a href="#" class="p-2 text-[var(--text-secondary)] hover:text-[var(--surface-brand-primary)] transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                                <i class="fab fa-discord fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-[var(--text-secondary)] hover:text-[var(--surface-brand-primary)] transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+                                <i class="fab fa-twitch fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-[var(--text-secondary)] hover:text-[var(--surface-brand-primary)] transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-[var(--text-secondary)] hover:text-[var(--surface-brand-primary)] transition-colors" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube fa-lg"></i>
+                            </a>
+                                            </div>
+                            </div>
+
+            <!-- Footer Sections -->
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Gaming</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/services/gaming-pcs" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Gaming PCs
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/vr-arena" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    VR Arena
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/tournaments" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Tournaments
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/events" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Events
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Services</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/services/repair" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    PC Repair
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/upgrades" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Upgrades
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/events" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Private Events
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/memberships" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Memberships
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Community</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/about" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    About Us
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/blog" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Blog
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/contact" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Contact
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/privacy" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            
+            <!-- Newsletter -->
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Stay Updated</h4>
+                    <p class="text-[var(--text-secondary)] mb-6 mb-4">Get the latest gaming news, events, and exclusive offers delivered to your inbox.</p>
+                    <form class="flex flex-col gap-2 sm:flex-row">
+                        <input type="email" placeholder="Enter your email address" class="input input-bordered w-full text-neutral-50 bg-neutral-800 rounded-md border border-neutral-800 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent" required>
+                        <button type="submit" class="btn btn-accent px-4 py-2 font-bold text-neutral-50 rounded-md transition-colors hover:bg-accent-600">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+                    </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 pt-8 border-t border-neutral-800 text-center">
+            <p class="text-sm text-[var(--text-secondary)]">
+                © 2025 Cyberia Gaming Lounge. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Mobile Menu Script -->
+    <!-- Mobile Menu Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBtn = document.getElementById('menu-btn');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const body = document.body;
+
+        if (!mobileMenu || !menuBtn) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+
+        let isOpen = false;
+        let focusTrap = null;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+                    }
+
+        function openMenu() {
+            isOpen = true;
+                            mobileMenu.style.opacity = '0';
+                mobileMenu.style.display = 'block';
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.style.transition = 'opacity 300ms ease-in-out';
+                    mobileMenu.style.opacity = '1';
+                }, 10);
+            
+            if (openIcon) openIcon.classList.add('hidden');
+            if (closeIcon) closeIcon.classList.remove('hidden');
+
+            menuBtn.classList.add('active');
+            mobileMenu.classList.add('active');
+            menuBtn.setAttribute('aria-expanded', 'true');
+
+                            body.style.overflow = 'hidden';
+            
+                            const focusableElements = mobileMenu.querySelectorAll('.mobile-menu-content a, .mobile-menu-content button, .mobile-menu-content input, .mobile-menu-content select, .mobile-menu-content textarea, .mobile-menu-content [tabindex]:not([tabindex="-1"])');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                if (firstElement) firstElement.focus();
+                focusTrap = function(e) {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstElement) {
+                                e.preventDefault();
+                                lastElement.focus();
+                            }
+                        } else {
+                            if (document.activeElement === lastElement) {
+                                e.preventDefault();
+                                firstElement.focus();
+                            }
+                        }
+                    }
+                };
+                mobileMenu.addEventListener('keydown', focusTrap);
+            
+            window.dispatchEvent(new CustomEvent('mobileMenuOpen', { detail: { menu: mobileMenu } }));
+                    }
+
+        function closeMenu() {
+            isOpen = false;
+                            mobileMenu.style.transition = 'opacity 300ms ease-in-out';
+                mobileMenu.style.opacity = '0';
+                setTimeout(() => {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            
+            if (openIcon) openIcon.classList.remove('hidden');
+            if (closeIcon) closeIcon.classList.add('hidden');
+
+            menuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+
+                            body.style.overflow = '';
+            
+                            if (focusTrap) {
+                    mobileMenu.removeEventListener('keydown', focusTrap);
+                    focusTrap = null;
+                }
+            
+            window.dispatchEvent(new CustomEvent('mobileMenuClose', { detail: { menu: mobileMenu } }));
+                    }
+
+        menuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+                    const navLinks = mobileMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (!this.getAttribute('data-dropdown-toggle')) {
+                        setTimeout(() => closeMenu(), 100);
+                    }
+                });
+            });
+        
+                    document.addEventListener('click', function(e) {
+                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+        
+                    document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && isOpen) {
+                    closeMenu();
+                }
+            });
+        
+                    window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768 && isOpen) {
+                    closeMenu();
+                }
+            });
+        
+        
+        if (mobileMenu.classList.contains('hidden')) {
+            closeMenu();
+        }
+    });
+</script>
+
+ 
+    </main>
+
+    
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/badger-accordion@1.2.4/dist/badger-accordion.min.js"></script>
+
+            
+        <script type="module" src="media/app.js"></script>
+         
+</body>
+</html>
+

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Page Not Found</title>
+
+    
+
+            
+        <link rel="stylesheet" href="media/app.css">
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/badger-accordion@1.2.4/dist/badger-accordion.css">
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+     
+</head>
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+
+    
+
+    
+    <main class="flex-grow">
+            <!-- Header & Navigation -->
+    <!-- Header using Tailwind/daisyUI semantic colors only -->
+<header class="sticky top-0 z-50 bg-primary-inverted shadow-lg font-sans">
+    <div class="container flex justify-between items-center px-4 py-4 mx-auto">
+        <!-- Logo -->
+        <div class="text-2xl font-extrabold uppercase text-primary-500">
+            <a href="/" class="flex items-center">
+                <span class="text-primary-500">CI</span><span class="text-neutral-900">WEB</span><span class="text-neutral-400">GROUP</span>
+            </a>
+        </div>
+
+        <!-- Centered Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 bg-surface-secondary px-4 py-2 rounded-lg shadow-md bg-neutral-50">
+            
+                            <a href="/"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Home
+                </a>
+                            <a href="/about"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    About
+                </a>
+                            <a href="/blog"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Blog
+                </a>
+                            <a href="/reviews"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Reviews
+                </a>
+                            <a href="/contact-us"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Contact
+                </a>
+            
+            
+            <div class="relative inline-block" id="dd-68a8be6d4325b" data-dropdown-root>
+    <button
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-2 font-semibold text-font-primary transition hover:text-indigo-600"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dd-68a8be6d4325b-menu"
+        data-dropdown-button
+    >
+        Services
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <div
+        id="dd-68a8be6d4325b-menu"
+        class="absolute z-50 mt-2 min-w-56 left-0 rounded-md border border-gray-200 bg-white shadow-lg origin-top transform transition ease-out duration-150 hidden opacity-0 scale-95"
+        role="menu"
+        aria-hidden="true"
+        data-dropdown-menu
+    >
+        <nav class="py-2">
+                            <a href="/services/consulting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Consulting
+                </a>
+                            <a href="/services/development" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Development
+                </a>
+                            <a href="/services/design" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Design
+                </a>
+                            <a href="/services/marketing" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Marketing
+                </a>
+                    </nav>
+    </div>
+</div>
+
+<script>
+(function() {
+  var root = document.getElementById('dd-68a8be6d4325b');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-dropdown-button]');
+  var menu = root.querySelector('[data-dropdown-menu]');
+  if (!btn || !menu) return;
+
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', v ? 'false' : 'true');
+    menu.classList.toggle('hidden', !v);
+    menu.classList.toggle('opacity-0', !v);
+    menu.classList.toggle('scale-95', !v);
+    menu.classList.toggle('opacity-100', v);
+    menu.classList.toggle('scale-100', v);
+  }
+  // Ensure initial hidden state and transition classes
+  menu.classList.add('opacity-0','scale-95','hidden');
+  menu.classList.remove('opacity-100','scale-100');
+  setOpen(false);
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    setOpen(!open);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!root.contains(e.target)) setOpen(false);
+  });
+
+  // Keyboard: Escape closes; ArrowDown opens and focuses first item
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      setOpen(true);
+      var first = menu.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+  });
+  menu.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();
+</script>
+            
+            <div class="relative inline-block" id="dd-68a8be6d432b7" data-dropdown-root>
+    <button
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-2 font-semibold text-font-primary transition hover:text-indigo-600"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dd-68a8be6d432b7-menu"
+        data-dropdown-button
+    >
+        Locations
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <div
+        id="dd-68a8be6d432b7-menu"
+        class="absolute z-50 mt-2 min-w-56 left-0 rounded-md border border-gray-200 bg-white shadow-lg origin-top transform transition ease-out duration-150 hidden opacity-0 scale-95"
+        role="menu"
+        aria-hidden="true"
+        data-dropdown-menu
+    >
+        <nav class="py-2">
+                            <a href="/locations/new-york" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    New York
+                </a>
+                            <a href="/locations/los-angeles" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Los Angeles
+                </a>
+                            <a href="/locations/chicago" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Chicago
+                </a>
+                            <a href="/locations/houston" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" role="menuitem">
+                    Houston
+                </a>
+                    </nav>
+    </div>
+</div>
+
+<script>
+(function() {
+  var root = document.getElementById('dd-68a8be6d432b7');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-dropdown-button]');
+  var menu = root.querySelector('[data-dropdown-menu]');
+  if (!btn || !menu) return;
+
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', v ? 'false' : 'true');
+    menu.classList.toggle('hidden', !v);
+    menu.classList.toggle('opacity-0', !v);
+    menu.classList.toggle('scale-95', !v);
+    menu.classList.toggle('opacity-100', v);
+    menu.classList.toggle('scale-100', v);
+  }
+  // Ensure initial hidden state and transition classes
+  menu.classList.add('opacity-0','scale-95','hidden');
+  menu.classList.remove('opacity-100','scale-100');
+  setOpen(false);
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    setOpen(!open);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!root.contains(e.target)) setOpen(false);
+  });
+
+  // Keyboard: Escape closes; ArrowDown opens and focuses first item
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      setOpen(true);
+      var first = menu.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+  });
+  menu.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();
+</script>        </nav>
+
+        <!-- Action button -->
+                    <a href="#contact" class="text-font-primary bg-surface-brand-primary px-8 py-3 font-bold uppercase hover:bg-accent-600 rounded-md">
+                Contact Us Today
+            </a>
+        
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+            <button id="menu-btn" class="text-neutral-900 focus:outline-none">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-neutral-50">
+        <nav class="flex flex-col items-center py-4 space-y-4">
+            
+                            <a href="/" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Home
+                </a>
+                            <a href="/about" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    About
+                </a>
+                            <a href="/blog" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Blog
+                </a>
+                            <a href="/reviews" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Reviews
+                </a>
+                            <a href="/contact-us" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Contact
+                </a>
+            
+            
+                            <div class="w-11/12 mt-2">
+                    <div class="px-4 py-2 text-xs font-bold uppercase tracking-wide opacity-70">Services</div>
+                                            <a href="/services/consulting" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Consulting</a>
+                                            <a href="/services/development" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Development</a>
+                                            <a href="/services/design" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Design</a>
+                                            <a href="/services/marketing" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Marketing</a>
+                                    </div>
+                                        <div class="w-11/12 mt-2">
+                    <div class="px-4 py-2 text-xs font-bold uppercase tracking-wide opacity-70">Locations</div>
+                                            <a href="/locations/new-york" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">New York</a>
+                                            <a href="/locations/los-angeles" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Los Angeles</a>
+                                            <a href="/locations/chicago" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Chicago</a>
+                                            <a href="/locations/houston" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Houston</a>
+                                    </div>
+            
+                            <a href="#contact" class="w-11/12 mt-4 px-4 py-2 text-center font-bold bg-accent-500 text-white hover:bg-accent-600 rounded-md">
+                    Contact Us Today
+                </a>
+                    </nav>
+    </div>
+</header>
+
+    <main class="py-16">
+        <!-- 404 Error Section -->
+        <!-- Enhanced Content Section -->
+<section class="py-16 text-font-primary bg-primary-inverted font-body ">
+    <div class="container mx-auto px-4">
+                    <div class="text-center">
+                                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-700" style="font-family: var(--font-heading, system-ui);">
+                                                    404 - Page Not Found
+                                            </h2>
+                
+                                    <div class="text-lg leading-relaxed text-primary" style="font-family: var(--font-body, system-ui);">
+                        We are dedicated to providing exceptional service and innovative solutions that exceed our clients' expectations.
+                    </div>
+                
+                                    <div class="mt-8">
+                        <div class="mx-auto max-w-2xl">
+                <div class="mb-8">
+                    <div class="text-8xl font-bold text-error mb-4">404</div>
+                    <p class="text-xl text-error-content mb-8">Oops! The page you're looking for doesn't exist.</p>
+                    <p class="text-base-content mb-8">It might have been moved, deleted, or you entered the wrong URL.</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <a href="/" class="inline-block px-8 py-3 font-bold text-error-content bg-error rounded-lg transition-all duration-300 hover:bg-error/80 hover:text-base-content">
+                        Go Back Home
+                    </a>
+                    <div class="text-center">
+                        <p class="text-base-content mb-4">Or try one of these popular pages:</p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="/services" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                Services
+                            </a>
+                            <a href="/about" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                About Us
+                            </a>
+                            <a href="/contact" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                Contact
+                            </a>
+                            <a href="/blog" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                Blog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                            </div>
+        
+                    <div class="mt-8">
+                <div class="mx-auto max-w-2xl">
+                <div class="mb-8">
+                    <div class="text-8xl font-bold text-error mb-4">404</div>
+                    <p class="text-xl text-error-content mb-8">Oops! The page you're looking for doesn't exist.</p>
+                    <p class="text-base-content mb-8">It might have been moved, deleted, or you entered the wrong URL.</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <a href="/" class="inline-block px-8 py-3 font-bold text-error-content bg-error rounded-lg transition-all duration-300 hover:bg-error/80 hover:text-base-content">
+                        Go Back Home
+                    </a>
+                    <div class="text-center">
+                        <p class="text-base-content mb-4">Or try one of these popular pages:</p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="/services" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                Services
+                            </a>
+                            <a href="/about" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                About Us
+                            </a>
+                            <a href="/contact" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                Contact
+                            </a>
+                            <a href="/blog" class="px-4 py-2 text-error border border-error rounded-lg transition-all duration-300 hover:bg-error hover:text-error-content">
+                                Blog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+</section>    </main>
+
+    <!-- Footer -->
+    <!-- Footer using Tailwind/daisyUI semantic colors only -->
+<footer class="py-12 px-4 text-font-primary bg-primary-inverted font-sans">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="md:col-span-2 lg:col-span-1 block">
+                <h3 class="text-2xl font-extrabold mb-2 uppercase text-primary-500">CI Web Group</h3>
+                                    <p class="text-sm">1234 Elm Street, Suite 567, Springfield, IL 62704</p>
+                                                    <p class="text-sm">(555) 123-4567</p>
+                
+                <div class="w-full flex justify-center mt-4">
+    <iframe
+        width="600"
+        height="450"
+        class="rounded-lg shadow-lg border border-[var(--border-tretinary)]"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUIz4JfDWIGqKZDi0YRmZy_lBFzgeAav8&q=1234+Elm+Street%2C+Suite+567%2C+Springfield%2C+IL+62704">
+    </iframe>
+</div>
+                                    <div class="flex space-x-3">
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin fa-lg"></i>
+                            </a>
+                                            </div>
+                            </div>
+
+            <!-- Footer Sections -->
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase text-primary-500">Company</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/about" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    About Us
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/team" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Meet The Team
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/careers" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Careers
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/contact" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Contact
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase text-primary-500">Services</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/services/websites" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Websites
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/seo" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    SEO
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/advertising" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Digital Advertising
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/social" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Social Media
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase text-primary-500">Resources</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/blog" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Blog
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/case-studies" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Case Studies
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/privacy" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            
+            <!-- Newsletter -->
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase text-primary-500">Sign Up for Our Newsletter</h4>
+                    <p class="text-neutral-400 mb-6 mb-4">Get the latest insights, strategies, and news delivered to your inbox.</p>
+                    <form class="flex flex-col gap-2 sm:flex-row">
+                        <input type="email" placeholder="Enter your email address" class="input input-bordered w-full text-neutral-50 bg-neutral-800 rounded-md border border-neutral-800 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent" required>
+                        <button type="submit" class="btn btn-accent px-4 py-2 font-bold text-neutral-50 rounded-md transition-colors hover:bg-accent-600">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+                    </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 pt-8 border-t border-neutral-800 text-center">
+            <p class="text-sm text-neutral-500">
+                © 2025 CI Web Group. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+
+            if(menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIconOpen.classList.toggle('hidden');
+                    menuIconClose.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+ 
+    </main>
+
+    
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/badger-accordion@1.2.4/dist/badger-accordion.min.js"></script>
+
+            
+        <script type="module" src="media/app.js"></script>
+         
+</body>
+</html>
+

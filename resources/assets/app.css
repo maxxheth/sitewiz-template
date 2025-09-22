@@ -1,0 +1,237 @@
+/*
+* This file is loaded into your Hyde/Hyde installation and is used to generate the styles for your project.
+* You can use this file to customize your TailwindCSS or to add new classes.
+*
+* The HydeFront package contains some base styles to make your site look even more amazing.
+*
+* The compiled result of this file is shipped with HydePHP and is found at _media/app.css,
+* so you don't need to compile this file unless you're making changes.
+*
+* If you want, you can load the compiled file with minified styles for a base install from the CDN.
+* See https://hydephp.com/docs/1.x/managing-assets#loading-from-cdn
+*/
+
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+
+  /* Background Images (use with bg-[var(--...)] ) */
+  --hero-bg-image: url('https://placehold.co/1920x1080/334155/e2e8f0?text=HVAC+System');
+  --hvac-unit-bg-image: url('https://placehold.co/600x400/cbd5e1/475569?text=HVAC+Units');
+  --van-bg-image: url('https://placehold.co/600x400/e2e8f0/475569?text=Service+Van');
+
+  /* Custom Colors */
+
+  --color-primary-inverted: #0F1415;
+  --color-surface-primary: #0F1415;
+  --color-secondary-custom: #FDFFEB;
+  --color-surface-brand-secondary-strong: #ECFB65;
+  --color-surface-brand-secondary-weak: #D3EA06;
+  --color-accent-green: #34A853;
+  --color-accent-blue: #4285F4;
+  --color-font-tertiary-invert: #6C8184;
+  --color-accent-red: #EB4335;
+  --color-accent-orange: #FBBC05;
+  --color-surface-secondary: #212A2B;
+  --color-surface-tertiary: #344346;
+  --color-border-primary: #212A2B;
+  --color-border-tertiary: #4E6164;
+  --color-font-primary: #F9FBFB;
+  --color-font-secondary: #DFE6E7;
+  --color-font-tertiary: #A8B6B8;
+  --color-surface-brand-primary: #7B43EA;
+  --color-brand-primary-dark: #5014C8;
+  --color-brand-primary-transparent: rgba(61, 12, 159, 0.70);
+
+  /* Logo Colors */
+  --color-logo-dark: #000509;
+  --color-logo-red: #D35141;
+  --color-logo-green: #A0AE56;
+  --color-logo-orange: #E69D58;
+  --color-logo-blue: #475778;
+  --color-logo-dark-green: #748535;
+  --color-logo-light-green: #D4EFDE;
+
+  /* Header Component Specific Colors */
+  --color-header-bg: #212A2B;
+  --color-header-outline: #4E6164;
+  --color-header-btn-bg: #344346;
+  --color-header-brand-btn-bg: #7B43EA;
+
+  /* Header Component Backgrounds (as custom properties) */
+  --header-nav-bg: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%), #212A2B;
+
+  /* Shadows */
+  --shadow-header: 0px 4px 4px rgba(0,0,0,0.10);
+  --inset-shadow-header-*: initial;
+  --inset-shadow-header-nav: inset 0px 1px 1px rgba(255,255,255,0.20);
+  --inset-shadow-header-btn: inset 0px 1px 1px rgba(255,255,255,0.16);
+  --inset-shadow-header-brand-btn: inset 0px 1px 1px rgba(255,255,255,0.32);
+
+  /* Border Radius */
+  --radius-header-btn: 14px;
+  --radius-header-brand-btn: 12px;
+
+  /* Custom Border Properties */
+  --border-header-brand-btn-outline: 1px solid #212A2B;
+}
+
+/* Typography Plugin Customization */
+@layer components {
+  .prose {
+    --tw-prose-body: #374151;
+    --tw-prose-headings: #111827;
+    --tw-prose-links: #5956eb;
+    --tw-prose-links-hover: #4f46e5;
+    --tw-prose-bold: #111827;
+    --tw-prose-counters: #6b7280;
+    --tw-prose-bullets: #d1d5db;
+    --tw-prose-hr: #e5e7eb;
+    --tw-prose-quotes: #111827;
+    --tw-prose-quote-borders: #e5e7eb;
+    --tw-prose-captions: #6b7280;
+    --tw-prose-code: #111827;
+    --tw-prose-pre-code: #e5e7eb;
+    --tw-prose-pre-bg: #1f2937;
+    --tw-prose-th-borders: #d1d5db;
+    --tw-prose-td-borders: #e5e7eb;
+    
+    line-height: 1.5;
+    max-width: 96ch;
+  }
+  
+  .prose h2 {
+    margin-bottom: 0.75em;
+    margin-top: 1.5em;
+  }
+  
+  .prose a {
+    color: var(--tw-prose-links);
+    text-decoration: none;
+  }
+  
+  .prose a:hover {
+    color: var(--tw-prose-links-hover);
+  }
+  
+  .prose blockquote {
+    background-color: rgba(128, 128, 128, 0.125);
+    border-left-color: #d1d5db;
+    color: unset;
+    font-weight: 500;
+    font-style: unset;
+    line-height: 1.25;
+    padding-left: 0.75em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .prose blockquote p {
+    padding-right: 0.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  
+  .prose blockquote p::before,
+  .prose blockquote p::after {
+    content: unset;
+  }
+  
+  .prose code {
+    font: unset;
+    background-color: rgba(128, 128, 128, 0.2);
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: -2px;
+    margin-right: 1px;
+    border-radius: 4px;
+  }
+  
+  .prose code::before,
+  .prose code::after {
+    content: unset;
+  }
+  
+  .prose pre code {
+    font-family: 'Fira Code Regular', Consolas, Monospace, 'Courier New';
+  }
+  
+  /* Dark mode prose styles */
+  .dark .prose {
+    --tw-prose-body: #d1d5db;
+    --tw-prose-headings: #ffffff;
+    --tw-prose-links: #818cf8;
+    --tw-prose-links-hover: #6366f1;
+    --tw-prose-bold: #ffffff;
+    --tw-prose-counters: #9ca3af;
+    --tw-prose-bullets: #4b5563;
+    --tw-prose-hr: #374151;
+    --tw-prose-quotes: #f9fafb;
+    --tw-prose-quote-borders: #374151;
+    --tw-prose-captions: #9ca3af;
+    --tw-prose-code: #ffffff;
+    --tw-prose-pre-code: #d1d5db;
+    --tw-prose-pre-bg: #1f2937;
+    --tw-prose-th-borders: #4b5563;
+    --tw-prose-td-borders: #374151;
+  }
+
+  /* Beveled Navigation Styles - Applied directly to nav element */
+  .bg-beveled-nav {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%), #212A2B;
+  }
+
+  .shadow-beveled {
+    box-shadow: 
+      inset 0px 6px 12px rgba(255, 255, 255, 0.04), 
+      inset 0px 1px 1px rgba(255, 255, 255, 0.2);
+  }
+
+  /* Neutral Button Shadow */
+  .shadow-neutral-button {
+    box-shadow: 
+      inset 0px 6px 12px rgba(255, 255, 255, 0.06), 
+      inset 0px 1px 1px rgba(255, 255, 255, 0.16);
+  }
+
+}
+
+
+
+/* Custom scrollbar for better aesthetics in dark mode */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+	background: #8e44ad;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #9b59b6;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* 12px */
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}

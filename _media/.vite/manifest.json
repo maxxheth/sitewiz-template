@@ -1,0 +1,11 @@
+{
+  "resources/assets/app.js": {
+    "file": "app.js",
+    "name": "app",
+    "src": "resources/assets/app.js",
+    "isEntry": true,
+    "css": [
+      "app.css"
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "name": "Healthcare Professional",
+  "description": "Trust-focused design system for healthcare providers",
+  "version": "1.0.0",
+  "colorPalette": {
+    "name": "Medical Trust",
+    "primary": {
+      "base": "#1e40af",
+      "light": "#3b82f6",
+      "dark": "#1e3a8a",
+      "subtle": "#dbeafe",
+      "intense": "#1d4ed8"
+    },
+    "secondary": {
+      "base": "#0f766e",
+      "light": "#14b8a6",
+      "dark": "#134e4a",
+      "subtle": "#ccfbf1",
+      "intense": "#0d9488"
+    },
+    "accent": {
+      "base": "#60a5fa",
+      "light": "#93c5fd",
+      "dark": "#3b82f6",
+      "subtle": "#eff6ff",
+      "intense": "#2563eb"
+    },
+    "neutral": {
+      "base": "#6b7280",
+      "light": "#9ca3af",
+      "dark": "#374151",
+      "subtle": "#f9fafb",
+      "intense": "#111827"
+    },
+    "semantic": {
+      "success": {
+        "base": "#059669",
+        "light": "#10b981",
+        "dark": "#047857",
+        "subtle": "#d1fae5",
+        "intense": "#065f46"
+      },
+      "warning": {
+        "base": "#d97706",
+        "light": "#f59e0b",
+        "dark": "#b45309",
+        "subtle": "#fef3c7",
+        "intense": "#92400e"
+      },
+      "error": {
+        "base": "#dc2626",
+        "light": "#ef4444",
+        "dark": "#b91c1c",
+        "subtle": "#fee2e2",
+        "intense": "#991b1b"
+      },
+      "info": {
+        "base": "#2563eb",
+        "light": "#3b82f6",
+        "dark": "#1d4ed8",
+        "subtle": "#dbeafe",
+        "intense": "#1e40af"
+      }
+    }
+  },
+  "fontCombination": {
+    "name": "Professional Medical",
+    "heading": {
+      "family": "Inter",
+      "weights": [400, 600, 700],
+      "fallback": "system-ui, -apple-system, sans-serif"
+    },
+    "body": {
+      "family": "Source Sans Pro",
+      "weights": [400, 500, 600],
+      "fallback": "system-ui, -apple-system, sans-serif"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [400, 500],
+      "fallback": "Consolas, Monaco, monospace"
+    }
+  },
+  "spacing": {
+    "scale": "1.25",
+    "baseUnit": "0.25rem",
+    "containerMaxWidth": "1200px"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+  },
+  "borderRadius": {
+    "sm": "0.125rem",
+    "md": "0.375rem",
+    "lg": "0.5rem",
+    "xl": "0.75rem"
+  },
+  "context": {
+    "industries": ["healthcare", "medical", "dental", "veterinary", "mental-health"],
+    "businessTypes": ["clinic", "hospital", "practice", "urgent-care", "telehealth"],
+    "mood": ["professional", "trustworthy", "calming", "clean", "accessible"],
+    "complexity": "medium",
+    "accessibilityLevel": "wcag-aaa"
+  },
+  "customizations": [
+    {
+      "type": "brand_color_integration",
+      "description": "Integrate practice brand colors while maintaining medical trust",
+      "compatibility": ["primary", "accent"]
+    },
+    {
+      "type": "specialty_focus",
+      "description": "Adjust colors for medical specialties (pediatrics = warmer, surgery = cooler)",
+      "compatibility": ["secondary", "accent"]
+    },
+    {
+      "type": "accessibility_enhancement",
+      "description": "Enhanced contrast for vision-impaired patients",
+      "compatibility": ["all"]
+    }
+  ]
+} 

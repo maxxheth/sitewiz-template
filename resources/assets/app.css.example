@@ -1,0 +1,237 @@
+/*
+* This file is loaded into your Hyde/Hyde installation and is used to generate the styles for your project.
+* You can use this file to customize your TailwindCSS or to add new classes.
+*
+* The HydeFront package contains some base styles to make your site look even more amazing.
+*
+* The compiled result of this file is shipped with HydePHP and is found at _media/app.css,
+* so you don't need to compile this file unless you're making changes.
+*
+* If you want, you can load the compiled file with minified styles for a base install from the CDN.
+* See https://hydephp.com/docs/1.x/managing-assets#loading-from-cdn
+*/
+
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+
+  /* Background Images (use with bg-[var(--...)] ) */
+  --hero-bg-image: url('https://placehold.co/1920x1080/334155/e2e8f0?text=HVAC+System');
+  --hvac-unit-bg-image: url('https://placehold.co/600x400/cbd5e1/475569?text=HVAC+Units');
+  --van-bg-image: url('https://placehold.co/600x400/e2e8f0/475569?text=Service+Van');
+
+  /* Custom Colors */
+
+  --color-primary-inverted: %COLOR_PRIMARY_INVERTED%;
+  --color-surface-primary: %COLOR_SURFACE_PRIMARY%;
+  --color-secondary-custom: %COLOR_SECONDARY_CUSTOM%;
+  --color-surface-brand-secondary-strong: %COLOR_SURFACE_BRAND_SECONDARY_STRONG%;
+  --color-surface-brand-secondary-weak: %COLOR_SURFACE_BRAND_SECONDARY_WEAK%;
+  --color-accent-green: %COLOR_ACCENT_GREEN%;
+  --color-accent-blue: %COLOR_ACCENT_BLUE%;
+  --color-font-tertiary-invert: %COLOR_FONT_TERTIARY_INVERT%;
+  --color-accent-red: %COLOR_ACCENT_RED%;
+  --color-accent-orange: %COLOR_ACCENT_ORANGE%;
+  --color-surface-secondary: %COLOR_SURFACE_SECONDARY%;
+  --color-surface-tertiary: %COLOR_SURFACE_TERTIARY%;
+  --color-border-primary: %COLOR_BORDER_PRIMARY%;
+  --color-border-tretinary: %COLOR_BORDER_TRETINARY%; /* Typo from source */
+  --color-font-primary: %COLOR_FONT_PRIMARY%;
+  --color-font-secondary: %COLOR_FONT_SECONDARY%;
+  --color-font-tertiary: %COLOR_FONT_TERTIARY%;
+  --color-surface-brand-primary: %COLOR_SURFACE_BRAND_PRIMARY%;
+  --color-brand-primary-dark: %COLOR_BRAND_PRIMARY_DARK%;
+  --color-brand-primary-transparent: %COLOR_BRAND_PRIMARY_TRANSPARENT%
+
+  /* Logo Colors */
+  --color-logo-dark: %COLOR_LOGO_DARK%;
+  --color-logo-red: %COLOR_LOGO_RED%;
+  --color-logo-green: %COLOR_LOGO_GREEN%;
+  --color-logo-orange: %COLOR_LOGO_ORANGE%;
+  --color-logo-blue: %COLOR_LOGO_BLUE%;
+  --color-logo-dark-green: %COLOR_LOGO_DARK_GREEN%;
+  --color-logo-light-green: %COLOR_LOGO_LIGHT_GREEN%;
+
+  /* Header Component Specific Colors */
+  --color-header-bg: %COLOR_HEADER_BG%;
+  --color-header-outline: %COLOR_HEADER_OUTLINE%;
+  --color-header-btn-bg: %COLOR_HEADER_BTN_BG%;
+  --color-header-brand-btn-bg: %COLOR_HEADER_BRAND_BTN_BG%;
+
+  /* Header Component Backgrounds (as custom properties) */
+  --header-nav-bg: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%), #212A2B;
+
+  /* Shadows */
+  --shadow-header: 0px 4px 4px rgba(0,0,0,0.10);
+  --inset-shadow-header-*: initial;
+  --inset-shadow-header-nav: inset 0px 1px 1px rgba(255,255,255,0.20);
+  --inset-shadow-header-btn: inset 0px 1px 1px rgba(255,255,255,0.16);
+  --inset-shadow-header-brand-btn: inset 0px 1px 1px rgba(255,255,255,0.32);
+
+  /* Border Radius */
+  --radius-header-btn: 14px;
+  --radius-header-brand-btn: 12px;
+
+  /* Custom Border Properties */
+  --border-header-brand-btn-outline: 1px solid #212A2B;
+}
+
+/* Typography Plugin Customization */
+@layer components {
+  .prose {
+    --tw-prose-body: #374151;
+    --tw-prose-headings: #111827;
+    --tw-prose-links: #5956eb;
+    --tw-prose-links-hover: #4f46e5;
+    --tw-prose-bold: #111827;
+    --tw-prose-counters: #6b7280;
+    --tw-prose-bullets: #d1d5db;
+    --tw-prose-hr: #e5e7eb;
+    --tw-prose-quotes: #111827;
+    --tw-prose-quote-borders: #e5e7eb;
+    --tw-prose-captions: #6b7280;
+    --tw-prose-code: #111827;
+    --tw-prose-pre-code: #e5e7eb;
+    --tw-prose-pre-bg: #1f2937;
+    --tw-prose-th-borders: #d1d5db;
+    --tw-prose-td-borders: #e5e7eb;
+    
+    line-height: 1.5;
+    max-width: 96ch;
+  }
+  
+  .prose h2 {
+    margin-bottom: 0.75em;
+    margin-top: 1.5em;
+  }
+  
+  .prose a {
+    color: var(--tw-prose-links);
+    text-decoration: none;
+  }
+  
+  .prose a:hover {
+    color: var(--tw-prose-links-hover);
+  }
+  
+  .prose blockquote {
+    background-color: rgba(128, 128, 128, 0.125);
+    border-left-color: #d1d5db;
+    color: unset;
+    font-weight: 500;
+    font-style: unset;
+    line-height: 1.25;
+    padding-left: 0.75em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .prose blockquote p {
+    padding-right: 0.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  
+  .prose blockquote p::before,
+  .prose blockquote p::after {
+    content: unset;
+  }
+  
+  .prose code {
+    font: unset;
+    background-color: rgba(128, 128, 128, 0.2);
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: -2px;
+    margin-right: 1px;
+    border-radius: 4px;
+  }
+  
+  .prose code::before,
+  .prose code::after {
+    content: unset;
+  }
+  
+  .prose pre code {
+    font-family: 'Fira Code Regular', Consolas, Monospace, 'Courier New';
+  }
+  
+  /* Dark mode prose styles */
+  .dark .prose {
+    --tw-prose-body: #d1d5db;
+    --tw-prose-headings: #ffffff;
+    --tw-prose-links: #818cf8;
+    --tw-prose-links-hover: #6366f1;
+    --tw-prose-bold: #ffffff;
+    --tw-prose-counters: #9ca3af;
+    --tw-prose-bullets: #4b5563;
+    --tw-prose-hr: #374151;
+    --tw-prose-quotes: #f9fafb;
+    --tw-prose-quote-borders: #374151;
+    --tw-prose-captions: #9ca3af;
+    --tw-prose-code: #ffffff;
+    --tw-prose-pre-code: #d1d5db;
+    --tw-prose-pre-bg: #1f2937;
+    --tw-prose-th-borders: #4b5563;
+    --tw-prose-td-borders: #374151;
+  }
+
+  /* Beveled Navigation Styles - Applied directly to nav element */
+  .bg-beveled-nav {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%), #212A2B;
+  }
+
+  .shadow-beveled {
+    box-shadow: 
+      inset 0px 6px 12px rgba(255, 255, 255, 0.04), 
+      inset 0px 1px 1px rgba(255, 255, 255, 0.2);
+  }
+
+  /* Neutral Button Shadow */
+  .shadow-neutral-button {
+    box-shadow: 
+      inset 0px 6px 12px rgba(255, 255, 255, 0.06), 
+      inset 0px 1px 1px rgba(255, 255, 255, 0.16);
+  }
+
+}
+
+
+
+/* Custom scrollbar for better aesthetics in dark mode */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+	background: #8e44ad;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #9b59b6;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* 12px */
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}

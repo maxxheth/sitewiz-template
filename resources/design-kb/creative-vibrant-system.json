@@ -1,0 +1,208 @@
+{
+  "name": "creative-vibrant",
+  "description": "A bold and expressive design system for creative agencies, artists, and innovative businesses",
+  "version": "1.0.0",
+  "color_palette": {
+    "name": "Creative Expression",
+    "description": "Vibrant and energetic colors that inspire creativity and innovation",
+    "primary": {
+      "base": "#FF6B35",
+      "light": "#FF8A5C",
+      "dark": "#E55A2B",
+      "subtle": "#FFF2ED",
+      "intense": "#CC4A1F"
+    },
+    "secondary": {
+      "base": "#6C5CE7",
+      "light": "#8B7EE8",
+      "dark": "#5A4FCF",
+      "subtle": "#F4F3FF",
+      "intense": "#4A3FBF"
+    },
+    "accent": {
+      "base": "#00D4AA",
+      "light": "#26E0B8",
+      "dark": "#00B894",
+      "subtle": "#E6FFF9",
+      "intense": "#009688"
+    },
+    "neutral": {
+      "base": "#2D3748",
+      "light": "#718096",
+      "dark": "#1A202C",
+      "subtle": "#F7FAFC",
+      "intense": "#0D1117"
+    },
+    "semantic": {
+      "success": {
+        "base": "#00D4AA",
+        "light": "#C6F6D5",
+        "dark": "#00A085",
+        "subtle": "#F0FFF4",
+        "intense": "#006B5A"
+      },
+      "warning": {
+        "base": "#FFD93D",
+        "light": "#FFF9C4",
+        "dark": "#D69E2E",
+        "subtle": "#FFFBEB",
+        "intense": "#B7791F"
+      },
+      "error": {
+        "base": "#FF5E5B",
+        "light": "#FED7D7",
+        "dark": "#E53E3E",
+        "subtle": "#FFF5F5",
+        "intense": "#C53030"
+      },
+      "info": {
+        "base": "#6C5CE7",
+        "light": "#E9D8FD",
+        "dark": "#553C9A",
+        "subtle": "#FAF5FF",
+        "intense": "#44337A"
+      }
+    },
+    "context": {
+      "industries": ["creative", "design", "advertising", "art", "media", "entertainment"],
+      "mood": ["vibrant", "innovative", "expressive", "bold", "energetic"],
+      "accessibility": "AA",
+      "usage_notes": "High-contrast combinations for accessibility while maintaining creative energy. Orange primary for warmth and creativity, purple secondary for sophistication.",
+      "combinations": ["tech-startup", "modern-minimalist"]
+    }
+  },
+  "font_system": {
+    "name": "Creative Typography",
+    "description": "Modern and expressive font combination for creative content",
+    "heading": {
+      "family": "Poppins",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [400, 500, 600, 700, 800],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap",
+      "license": "Open Font License"
+    },
+    "body": {
+      "family": "Inter",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [400, 500, 600],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+      "license": "Open Font License"
+    },
+    "accent": {
+      "family": "Playfair Display",
+      "fallbacks": ["Georgia", "serif"],
+      "weights": [400, 500, 600, 700],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap",
+      "license": "Open Font License"
+    },
+    "monospace": {
+      "family": "Fira Code",
+      "fallbacks": ["Consolas", "Monaco", "Courier New", "monospace"],
+      "weights": [400, 500, 600],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap",
+      "license": "Open Font License"
+    },
+    "context": {
+      "industries": ["creative", "design", "advertising", "media"],
+      "style": ["modern", "expressive", "sophisticated"],
+      "readability": "Good - balanced between creativity and readability",
+      "performance": "Moderate - multiple font weights for expressive typography",
+      "usage_notes": "Poppins for headings adds personality, Inter for body ensures readability, Playfair Display for elegant accents"
+    }
+  },
+  "spacing": {
+    "base": "0.25rem",
+    "scale": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem",
+      "3xl": "4rem",
+      "4xl": "6rem"
+    },
+    "custom": {
+      "creative-gap": "2.5rem",
+      "portfolio-gap": "3rem",
+      "hero-padding": "6rem"
+    }
+  },
+  "border_radius": {
+    "none": "0",
+    "small": "0.375rem",
+    "medium": "0.75rem",
+    "large": "1rem",
+    "full": "9999px"
+  },
+  "shadows": {
+    "subtle": "0 2px 4px rgba(0, 0, 0, 0.1)",
+    "medium": "0 8px 16px rgba(0, 0, 0, 0.15)",
+    "large": "0 20px 25px rgba(0, 0, 0, 0.15)",
+    "colored": "0 8px 16px rgba(255, 107, 53, 0.3)",
+    "inner": "inset 0 2px 4px rgba(0, 0, 0, 0.1)"
+  },
+  "context": {
+    "industries": ["creative", "design", "advertising", "art", "media", "entertainment", "photography"],
+    "business_types": ["b2c", "b2b", "freelance", "agency"],
+    "complexity": "complex",
+    "accessibility": "AA",
+    "responsive_notes": "Emphasizes visual hierarchy and creative layouts across all screen sizes",
+    "brand_personality": ["vibrant", "innovative", "expressive", "bold", "creative", "modern"],
+    "usage_examples": [
+      {
+        "component": "button",
+        "variant": "primary",
+        "properties": {
+          "background": "linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%)",
+          "color": "white",
+          "border-radius": "var(--border-radius-large)",
+          "padding": "var(--spacing-md) var(--spacing-xl)",
+          "font-family": "var(--font-heading)",
+          "font-weight": "600",
+          "box-shadow": "var(--shadow-colored)"
+        },
+        "context": "Use for primary actions like 'View Portfolio' or 'Start Project'"
+      },
+      {
+        "component": "card",
+        "variant": "portfolio",
+        "properties": {
+          "background": "white",
+          "border-radius": "var(--border-radius-large)",
+          "padding": "var(--spacing-xl)",
+          "box-shadow": "var(--shadow-large)",
+          "transition": "transform 0.3s ease, box-shadow 0.3s ease"
+        },
+        "context": "Use for portfolio items, project showcases, or service cards"
+      },
+      {
+        "component": "hero",
+        "variant": "creative",
+        "properties": {
+          "background": "linear-gradient(135deg, var(--color-primary-subtle) 0%, var(--color-secondary-subtle) 50%, var(--color-accent-subtle) 100%)",
+          "color": "var(--color-neutral-intense)",
+          "padding": "var(--spacing-hero-padding) var(--spacing-xl)",
+          "text-align": "center"
+        },
+        "context": "Use for main hero sections on creative agency or portfolio websites"
+      },
+      {
+        "component": "text",
+        "variant": "accent",
+        "properties": {
+          "font-family": "var(--font-accent)",
+          "font-size": "1.5rem",
+          "color": "var(--color-secondary)",
+          "font-weight": "600",
+          "line-height": "1.4"
+        },
+        "context": "Use for elegant quotes, testimonials, or featured text"
+      }
+    ]
+  }
+} 

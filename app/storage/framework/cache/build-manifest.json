@@ -1,0 +1,53 @@
+{
+    "generated": "2025-08-22T19:01:01.321029Z",
+    "pages": {
+        "404": {
+            "source_path": "_pages\/404.blade.php",
+            "output_path": "404.html",
+            "source_hash": "3f58653c0d428ce0d21db5d8e1d26856",
+            "output_hash": "4f28806ca0c0e0413d659c91202a949f"
+        },
+        "about": {
+            "source_path": "_pages\/about.blade.php",
+            "output_path": "about.html",
+            "source_hash": "8250d2343174731ddceaa69a47a957dc",
+            "output_hash": "4311216858d4aa5f4da1e195b7db7a13"
+        },
+        "blog": {
+            "source_path": "_pages\/blog.blade.php",
+            "output_path": "blog.html",
+            "source_hash": "9bd02c04a9eb3f3d14d5d049aa739c29",
+            "output_hash": "6fd07f38e0bfa965a9ef569240a9eb15"
+        },
+        "contact-us": {
+            "source_path": "_pages\/contact-us.blade.php",
+            "output_path": "contact-us.html",
+            "source_hash": "e58654a6ce4ae0d7cfcd4a649c7320ff",
+            "output_hash": "318f8daffc3444fcd3eb5e34e90f66ad"
+        },
+        "index": {
+            "source_path": "_pages\/index.blade.php",
+            "output_path": "index.html",
+            "source_hash": "68d806f76937f13bcff77c0905f837b4",
+            "output_hash": "9eed6a7de1b76f4c8e0908c144bb8e86"
+        },
+        "reviews": {
+            "source_path": "_pages\/reviews.blade.php",
+            "output_path": "reviews.html",
+            "source_hash": "2c055d9d2875139578eccdf357fdfbd8",
+            "output_hash": "1f49bf22e211c55bb8669bb4d2baa818"
+        },
+        "services": {
+            "source_path": "_pages\/services.blade.php",
+            "output_path": "services.html",
+            "source_hash": "51f93833e34efbd2c4dadcbf8abf4bff",
+            "output_hash": "ced82879bd0b3e67b91ae832c901e276"
+        },
+        "services\/service-template": {
+            "source_path": "_pages\/services\/service-template.blade.php",
+            "output_path": "services\/service-template.html",
+            "source_hash": "6b6a77ee7f825a032cb848ba1b9f72a7",
+            "output_hash": "fd4ee9da90ced17aa3e9013d325958a6"
+        }
+    }
+}

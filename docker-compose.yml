@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  sitewiz:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sitewiz
+    restart: always
+    networks:
+      - web
+      - cache
+    labels:
+      - "ci.groups=website,wordpress"
+      - "traefik.http.routers.sitewiz.rule=Host(`sitewiz.stg.ciwgserver.com`)"
+      - "traefik.http.routers.sitewiz.tls=true"
+      - "traefik.http.routers.sitewiz.tls.certresolver=lets-encrypt"
+      - "traefik.http.services.sitewiz.loadbalancer.server.port=80"
+networks:
+  cache:
+    name: cache
+    external: true
+  web:
+    name: web
+    external: true

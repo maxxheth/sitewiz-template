@@ -1,0 +1,133 @@
+@plugin "daisyui";
+@import "./hvac-ui-vars";
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth; /* For smooth scrolling to sections */
+}
+
+/* Prevents body scroll when drawer is open */
+body.drawer-open {
+    overflow: hidden;
+}
+
+.hero-bg {
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card-bg, .blog-card-bg {
+    background-size: cover;
+    background-position: center;
+}
+
+.hvac-unit-bg {
+    background-image: var(--hvac-unit-bg-image);
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img-bg {
+    background-size: cover;
+    background-position: center;
+}
+
+.van-bg {
+    background-image: var(--van-bg-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chat-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--chat-primary-color);
+    color: var(--chat-text-color);
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px var(--chat-shadow-color);
+    z-index: 1000; /* Ensure chat bubble is above overlay if both are somehow visible */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-bubble:hover {
+    transform: scale(1.1);
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background-color: var(--chat-text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--chat-popup-shadow-color);
+    z-index: 1000; /* Ensure chat popup is above overlay */
+    overflow: hidden;
+}
+
+.chat-popup-header {
+    background-color: var(--chat-primary-color);
+    color: var(--chat-text-color);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-popup-body {
+    padding: 15px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.chat-popup-footer {
+    padding: 10px;
+    border-top: 1px solid var(--chat-border-color);
+}
+
+.chat-popup-footer textarea {
+    width: 100%;
+    border: 1px solid var(--chat-input-border-color);
+    border-radius: 4px;
+    padding: 8px;
+    resize: none;
+}
+
+.close-chat {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.page-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.page-section:first-of-type {
+    padding-top: 0;
+}
+
+/* Mobile Drawer Styles */
+#mobileMenu.open {
+    transform: translateX(0);
+}
+
+#mobileMenuOverlay.open {
+    opacity: 1;
+    pointer-events: auto; /* Allow clicks when visible */
+}
+
+#mobileMenuOverlay { /* Initial state for transition */
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks when hidden */
+}

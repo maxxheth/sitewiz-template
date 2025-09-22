@@ -1,0 +1,193 @@
+{
+  "name": "healthcare-professional",
+  "description": "A trustworthy and accessible design system optimized for healthcare and medical businesses",
+  "version": "1.0.0",
+  "color_palette": {
+    "name": "Medical Trust",
+    "description": "Calming blues and greens with accessible contrast ratios",
+    "primary": {
+      "base": "#0066CC",
+      "light": "#4A90E2",
+      "dark": "#004499",
+      "subtle": "#E6F3FF",
+      "intense": "#003366"
+    },
+    "secondary": {
+      "base": "#28A745",
+      "light": "#5CB85C",
+      "dark": "#1E7E34",
+      "subtle": "#E8F5E8",
+      "intense": "#155724"
+    },
+    "accent": {
+      "base": "#17A2B8",
+      "light": "#5BC0DE",
+      "dark": "#117A8B",
+      "subtle": "#E6F9FC",
+      "intense": "#0C5460"
+    },
+    "neutral": {
+      "base": "#6C757D",
+      "light": "#ADB5BD",
+      "dark": "#495057",
+      "subtle": "#F8F9FA",
+      "intense": "#212529"
+    },
+    "semantic": {
+      "success": {
+        "base": "#28A745",
+        "light": "#D4EDDA",
+        "dark": "#155724",
+        "subtle": "#F0F8F0",
+        "intense": "#0A3D0A"
+      },
+      "warning": {
+        "base": "#FFC107",
+        "light": "#FFF3CD",
+        "dark": "#856404",
+        "subtle": "#FFFBF0",
+        "intense": "#533F03"
+      },
+      "error": {
+        "base": "#DC3545",
+        "light": "#F8D7DA",
+        "dark": "#721C24",
+        "subtle": "#FDF2F2",
+        "intense": "#4A1419"
+      },
+      "info": {
+        "base": "#17A2B8",
+        "light": "#D1ECF1",
+        "dark": "#0C5460",
+        "subtle": "#F0F9FA",
+        "intense": "#062C33"
+      }
+    },
+    "context": {
+      "industries": ["healthcare", "medical", "wellness", "pharmacy"],
+      "mood": ["trustworthy", "professional", "calming", "accessible"],
+      "accessibility": "AAA",
+      "usage_notes": "All color combinations meet WCAG AAA standards. Blue primary conveys trust and professionalism essential in healthcare. Green secondary suggests health and growth.",
+      "combinations": ["finance-conservative", "government-accessible"]
+    }
+  },
+  "font_system": {
+    "name": "Medical Clarity",
+    "description": "Highly readable font combination optimized for medical content",
+    "heading": {
+      "family": "Inter",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [400, 500, 600, 700],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+      "license": "Open Font License"
+    },
+    "body": {
+      "family": "Source Sans Pro",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [400, 600],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap",
+      "license": "Open Font License"
+    },
+    "accent": {
+      "family": "Inter",
+      "fallbacks": ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      "weights": [500, 600],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap",
+      "license": "Open Font License"
+    },
+    "monospace": {
+      "family": "JetBrains Mono",
+      "fallbacks": ["Consolas", "Monaco", "Courier New", "monospace"],
+      "weights": [400, 500],
+      "source": "google",
+      "import_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+      "license": "Open Font License"
+    },
+    "context": {
+      "industries": ["healthcare", "medical", "scientific"],
+      "style": ["professional", "readable", "modern"],
+      "readability": "Excellent - optimized for medical content and accessibility",
+      "performance": "Good - fonts are subset and optimized for web",
+      "usage_notes": "Inter for headings provides authority, Source Sans Pro for body text ensures excellent readability for medical information"
+    }
+  },
+  "spacing": {
+    "base": "0.25rem",
+    "scale": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem",
+      "3xl": "4rem"
+    },
+    "custom": {
+      "form-gap": "1.25rem",
+      "section-gap": "4rem",
+      "card-padding": "1.5rem"
+    }
+  },
+  "border_radius": {
+    "none": "0",
+    "small": "0.25rem",
+    "medium": "0.5rem",
+    "large": "0.75rem",
+    "full": "9999px"
+  },
+  "shadows": {
+    "subtle": "0 1px 3px rgba(0, 0, 0, 0.1)",
+    "medium": "0 4px 6px rgba(0, 0, 0, 0.1)",
+    "large": "0 10px 15px rgba(0, 0, 0, 0.1)",
+    "colored": "0 4px 6px rgba(0, 102, 204, 0.2)",
+    "inner": "inset 0 2px 4px rgba(0, 0, 0, 0.06)"
+  },
+  "context": {
+    "industries": ["healthcare", "medical", "dental", "veterinary", "wellness", "pharmacy"],
+    "business_types": ["b2c", "b2b", "nonprofit"],
+    "complexity": "moderate",
+    "accessibility": "AAA",
+    "responsive_notes": "Optimized for mobile-first design with touch-friendly interactive elements",
+    "brand_personality": ["trustworthy", "professional", "caring", "reliable", "accessible"],
+    "usage_examples": [
+      {
+        "component": "button",
+        "variant": "primary",
+        "properties": {
+          "background-color": "var(--color-primary)",
+          "color": "white",
+          "border-radius": "var(--border-radius-medium)",
+          "padding": "var(--spacing-sm) var(--spacing-lg)",
+          "font-family": "var(--font-heading)",
+          "font-weight": "600"
+        },
+        "context": "Use for primary actions like 'Book Appointment' or 'Contact Us'"
+      },
+      {
+        "component": "card",
+        "variant": "service",
+        "properties": {
+          "background-color": "white",
+          "border": "1px solid var(--color-neutral-subtle)",
+          "border-radius": "var(--border-radius-large)",
+          "padding": "var(--spacing-card-padding)",
+          "box-shadow": "var(--shadow-medium)"
+        },
+        "context": "Use for service descriptions, doctor profiles, or information cards"
+      },
+      {
+        "component": "hero",
+        "variant": "medical",
+        "properties": {
+          "background": "linear-gradient(135deg, var(--color-primary-subtle) 0%, var(--color-secondary-subtle) 100%)",
+          "color": "var(--color-neutral-intense)",
+          "padding": "var(--spacing-section-gap) var(--spacing-lg)"
+        },
+        "context": "Use for main hero sections on medical practice websites"
+      }
+    ]
+  }
+} 

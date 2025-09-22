@@ -1,0 +1,71 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    
+    /* Background Images */
+    --hero-bg-image: url('https://placehold.co/1920x1080/334155/e2e8f0?text=HVAC+System');
+    --hvac-unit-bg-image: url('https://placehold.co/600x400/cbd5e1/475569?text=HVAC+Units');
+    --van-bg-image: url('https://placehold.co/600x400/e2e8f0/475569?text=Service+Van');
+
+    --primary-color-inverted: #0F1415;
+    --surface-primary-color: #0F1415;
+    --secondary-color: #FDFFEB;
+    --surface-brand-secondary-strong: #ECFB65;
+    --surface-brand-secondary-weak: #D3EA06;
+    --accent-green: #34A853;
+    --accent-blue: #4285F4;
+    --text-tertiary-invert: #6C8184;
+    --accent-red: #EB4335; 
+    --accent-orange: #FBBC05; 
+
+    /* --- Extracted from Figma Header Component --- */
+    /* Base & Surface Colors */
+    --surface-secondary: #212A2B;
+    --surface-tertiary: #344346;
+    --border-primary: #212A2B;
+    --border-tretinary: #4E6164;
+
+    /* Text Colors */
+    --text-primary: #F9FBFB;
+    --text-secondary: #DFE6E7;
+    --text-tertiary: #A8B6B8;
+
+    /* Brand Colors */
+    --surface-brand-primary: #7B43EA;
+    --brand-primary-dark: #5014C8;
+    --brand-primary-transparent: rgba(61, 12, 159, 0.70);
+
+    /* Shadow & Overlay Colors */
+    --shadow-color-1: rgba(0, 0, 0, 0.10);
+    --shadow-color-light-inset-1: rgba(255, 255, 255, 0.20);
+    --shadow-color-light-inset-2: rgba(255, 255, 255, 0.16);
+    --shadow-color-light-inset-3: rgba(255, 255, 255, 0.32);
+    --overlay-dark: rgba(0, 0, 0, 0.20);
+
+    /* Gradient Colors */
+    --gradient-color-light-1: rgba(255, 255, 255, 0.16);
+    --gradient-color-dark-1: rgba(33, 42, 43, 0.10);
+
+    /* Logo Colors (from Figma export) */
+    --logo-color-dark: #000509;
+    --logo-color-red: #D35141;
+    --logo-color-green: #A0AE56;
+    --logo-color-orange: #E69D58;
+    --logo-color-blue: #475778;
+    --logo-color-dark-green: #748535;
+    --logo-color-light-green: #D4EFDE;
+
+    /* Header Component Specific (from inline styles) */
+    --header-bg: var(--surface-secondary, #212A2B);
+    --header-outline: var(--border-tretinary, #4E6164);
+    --header-shadow: 0px 4px 4px var(--shadow-color-1, rgba(0,0,0,0.10));
+    --header-nav-bg: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%), var(--surface-secondary, #212A2B);
+    --header-nav-shadow: 0px 1px 1px var(--shadow-color-light-inset-1, rgba(255,255,255,0.20)) inset;
+    --header-btn-bg: var(--surface-tertiary, #344346);
+    --header-btn-shadow: 0px 1px 1px var(--shadow-color-light-inset-2, rgba(255,255,255,0.16)) inset;
+    --header-btn-radius: 14px;
+    --header-brand-btn-bg: var(--surface-brand-primary, #7B43EA);
+    --header-brand-btn-shadow: 0px 1px 1px var(--shadow-color-light-inset-3, rgba(255,255,255,0.32)) inset;
+    --header-brand-btn-outline: 1px var(--border-primary, #212A2B) solid;
+    --header-brand-btn-radius: 12px;
+}

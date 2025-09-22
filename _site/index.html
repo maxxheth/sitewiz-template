@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HVAC Home Page</title>
+
+    
+
+            
+        <link rel="stylesheet" href="media/app.css">
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/badger-accordion@1.2.4/dist/badger-accordion.css">
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+     
+</head>
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+
+    
+
+    
+    <main class="flex-grow">
+            
+    <!-- Announcement Bar -->
+<div 
+    id="announcement-bar"
+    class="px-4 py-2 text-sm font-semibold text-center text-black bg-yellow-400  animate-pulse"
+    >
+        
+            ATTENTION GRABBING PROMOTION OR ANNOUNCEMENT GOES HERE
+    </div> 
+    <!-- Header using Tailwind/daisyUI semantic colors only -->
+<header class="sticky top-0 z-50 bg-primary-inverted shadow-lg font-sans">
+    <div class="container flex justify-between items-center px-4 py-4 mx-auto">
+        <!-- Logo -->
+        <div class="text-2xl font-extrabold uppercase text-primary-500">
+            <a href="/" class="flex items-center">
+                <span class="text-primary-500">CI</span><span class="text-neutral-900">WEB</span><span class="text-neutral-400">GROUP</span>
+            </a>
+        </div>
+
+        <!-- Centered Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8 bg-surface-secondary px-4 py-2 rounded-lg shadow-md bg-neutral-50">
+            
+                            <a href="/"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Home
+                </a>
+                            <a href="/about"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    About
+                </a>
+                            <a href="/blog"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Blog
+                </a>
+                            <a href="/reviews"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Reviews
+                </a>
+                            <a href="/contact-us"
+                   class="transition-colors font-semibold tracking-wide text-font-primary hover:text-accent-500">
+                    Contact
+                </a>
+            
+            
+            <div class="relative inline-block" id="dd-68cf014906676" data-dropdown-root>
+    <button
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-2 font-semibold text-font-primary transition hover:text-indigo-600"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dd-68cf014906676-menu"
+        data-dropdown-button
+    >
+        Services
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <div
+        id="dd-68cf014906676-menu"
+        class="absolute z-50 mt-2 min-w-56 left-0 rounded-md border border-gray-200 bg-white shadow-lg origin-top transform transition ease-out duration-150 hidden opacity-0 scale-95"
+        role="menu"
+        aria-hidden="true"
+        data-dropdown-menu
+    >
+        <nav class="py-2">
+                            <a href="/services/consulting" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Consulting
+                </a>
+                            <a href="/services/development" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Development
+                </a>
+                            <a href="/services/design" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Design
+                </a>
+                            <a href="/services/marketing" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Marketing
+                </a>
+                    </nav>
+    </div>
+</div>
+
+<script>
+(function() {
+  var root = document.getElementById('dd-68cf014906676');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-dropdown-button]');
+  var menu = root.querySelector('[data-dropdown-menu]');
+  if (!btn || !menu) return;
+
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', v ? 'false' : 'true');
+    menu.classList.toggle('hidden', !v);
+    menu.classList.toggle('opacity-0', !v);
+    menu.classList.toggle('scale-95', !v);
+    menu.classList.toggle('opacity-100', v);
+    menu.classList.toggle('scale-100', v);
+  }
+  // Ensure initial hidden state and transition classes
+  menu.classList.add('opacity-0','scale-95','hidden');
+  menu.classList.remove('opacity-100','scale-100');
+  setOpen(false);
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    setOpen(!open);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!root.contains(e.target)) setOpen(false);
+  });
+
+  // Keyboard: Escape closes; ArrowDown opens and focuses first item
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      setOpen(true);
+      var first = menu.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+  });
+  menu.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();
+</script>
+            
+            <div class="relative inline-block" id="dd-68cf0149066c4" data-dropdown-root>
+    <button
+        type="button"
+        class="inline-flex items-center gap-1 px-3 py-2 font-semibold text-font-primary transition hover:text-indigo-600"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dd-68cf0149066c4-menu"
+        data-dropdown-button
+    >
+        Locations
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <div
+        id="dd-68cf0149066c4-menu"
+        class="absolute z-50 mt-2 min-w-56 left-0 rounded-md border border-gray-200 bg-white shadow-lg origin-top transform transition ease-out duration-150 hidden opacity-0 scale-95"
+        role="menu"
+        aria-hidden="true"
+        data-dropdown-menu
+    >
+        <nav class="py-2">
+                            <a href="/locations/new-york" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    New York
+                </a>
+                            <a href="/locations/los-angeles" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Los Angeles
+                </a>
+                            <a href="/locations/chicago" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Chicago
+                </a>
+                            <a href="/locations/houston" class="block px-4 py-2 text-sm text-font-secondary hover:bg-primary-inverted" role="menuitem">
+                    Houston
+                </a>
+                    </nav>
+    </div>
+</div>
+
+<script>
+(function() {
+  var root = document.getElementById('dd-68cf0149066c4');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-dropdown-button]');
+  var menu = root.querySelector('[data-dropdown-menu]');
+  if (!btn || !menu) return;
+
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', v ? 'false' : 'true');
+    menu.classList.toggle('hidden', !v);
+    menu.classList.toggle('opacity-0', !v);
+    menu.classList.toggle('scale-95', !v);
+    menu.classList.toggle('opacity-100', v);
+    menu.classList.toggle('scale-100', v);
+  }
+  // Ensure initial hidden state and transition classes
+  menu.classList.add('opacity-0','scale-95','hidden');
+  menu.classList.remove('opacity-100','scale-100');
+  setOpen(false);
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    setOpen(!open);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!root.contains(e.target)) setOpen(false);
+  });
+
+  // Keyboard: Escape closes; ArrowDown opens and focuses first item
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      setOpen(true);
+      var first = menu.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+  });
+  menu.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+})();
+</script>        </nav>
+
+        <!-- Action button -->
+                    <div class="text-font-primary bg-surface-brand-primary px-8 py-3 font-bold uppercase hover:bg-accent-600 rounded-md">
+                (123) 456-7890
+            </div>
+        
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+            <button id="menu-btn" class="text-neutral-900 focus:outline-none">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-neutral-50">
+        <nav class="flex flex-col items-center py-4 space-y-4">
+            
+                            <a href="/" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Home
+                </a>
+                            <a href="/about" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    About
+                </a>
+                            <a href="/blog" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Blog
+                </a>
+                            <a href="/reviews" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Reviews
+                </a>
+                            <a href="/contact-us" class="block py-2 px-4 text-sm text-font-primary hover:text-accent-500">
+                    Contact
+                </a>
+            
+            
+                            <div class="w-11/12 mt-2">
+                    <div class="px-4 py-2 text-xs font-bold uppercase tracking-wide opacity-70">Services</div>
+                                            <a href="/services/consulting" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Consulting</a>
+                                            <a href="/services/development" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Development</a>
+                                            <a href="/services/design" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Design</a>
+                                            <a href="/services/marketing" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Marketing</a>
+                                    </div>
+                                        <div class="w-11/12 mt-2">
+                    <div class="px-4 py-2 text-xs font-bold uppercase tracking-wide opacity-70">Locations</div>
+                                            <a href="/locations/new-york" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">New York</a>
+                                            <a href="/locations/los-angeles" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Los Angeles</a>
+                                            <a href="/locations/chicago" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Chicago</a>
+                                            <a href="/locations/houston" class="block px-4 py-2 text-sm text-font-primary hover:text-accent-500">Houston</a>
+                                    </div>
+            
+                            <a href="#contact" class="w-11/12 mt-4 px-4 py-2 text-center font-bold bg-accent-500 text-white hover:bg-accent-600 rounded-md">
+                    Contact Us Today
+                </a>
+                    </nav>
+    </div>
+</header>
+
+    <main>
+        <!-- Enhanced Hero Section using custom Tailwind semantic color classes -->
+<section class="relative px-4 py-20 md:py-32 text-font-primary bg-surface-secondary font-heading">
+    <div class="container mx-auto relative z-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="mb-4 text-4xl font-extrabold leading-tight uppercase md:text-6xl text-primary-content">
+                Welcome to Cyberia Gaming Lounge
+            </h1>
+            <p class="mb-8 text-lg md:text-xl text-accent-500">
+                Experience the future of gaming with our state-of-the-art facilities and community-driven environment.
+            </p>
+        </div>
+
+                    <div class="mt-8 flex justify-center">
+                <a href="/services" class="inline-block px-8 py-3 font-bold uppercase bg-surface-brand-primary text-accent-content rounded-md transition-colors hover:bg-accent-700">
+                    Our Services
+                </a>
+            </div>
+            </div>
+</section>
+        
+        <!-- Services Section -->
+<section id="services" class="py-16 md:py-24 px-4 bg-white dark:bg-secondary-inverted text-secondary-inverted dark:text-font-primary font-sans">
+    <div class="container px-4 mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-center uppercase">Our Gaming Services</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 text-center max-w-3xl mx-auto">Everything you need for the ultimate gaming experience</p>
+        
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="bg-primary-dark-50 dark:bg-primary-dark-800 border border-gray-200 dark:border-gray-700 p-8 hover:border-indigo-500 dark:hover:border-indigo-400 transition-colors rounded-lg shadow-lg">
+                                                    <img src="https://placehold.co/600x450/111827/dc2626?text=Gaming+Setup" alt="High-Performance Gaming PCs" class="w-full h-auto object-cover mb-6 rounded-lg" />
+                        
+                        <h3 class="mb-2 text-2xl font-bold uppercase">High-Performance Gaming PCs</h3>
+
+                        <p class="leading-relaxed text-gray-700 dark:text-gray-300">Our state-of-the-art game servers and PCs ensure a lag-free, seamless gaming experience for everyone. Join the fun and compete with the best.</p>
+
+                                                    <a href="/services/gaming-pcs" class="inline-block px-6 py-2 mt-6 font-bold text-font-primary bg-indigo-600 transition-colors hover:bg-indigo-700 rounded-lg">
+                                Learn More
+                            </a>
+                                            </div>
+                                    <div class="bg-primary-dark-50 dark:bg-primary-dark-800 border border-gray-200 dark:border-gray-700 p-8 hover:border-indigo-500 dark:hover:border-indigo-400 transition-colors rounded-lg shadow-lg">
+                                                    <img src="https://placehold.co/600x450/111827/dc2626?text=PC+Repair" alt="PC Repair &amp; Upgrades" class="w-full h-auto object-cover mb-6 rounded-lg" />
+                        
+                        <h3 class="mb-2 text-2xl font-bold uppercase">PC Repair &amp; Upgrades</h3>
+
+                        <p class="leading-relaxed text-gray-700 dark:text-gray-300">Is your rig running slow? Our expert technicians can diagnose, repair, and upgrade your PC to get you back in the game faster and stronger.</p>
+
+                                                    <a href="/services/pc-repair" class="inline-block px-6 py-2 mt-6 font-bold text-font-primary bg-indigo-600 transition-colors hover:bg-indigo-700 rounded-lg">
+                                Learn More
+                            </a>
+                                            </div>
+                                    <div class="bg-primary-dark-50 dark:bg-primary-dark-800 border border-gray-200 dark:border-gray-700 p-8 hover:border-indigo-500 dark:hover:border-indigo-400 transition-colors rounded-lg shadow-lg">
+                                                    <img src="https://placehold.co/600x450/111827/dc2626?text=VR+Arena" alt="Virtual Reality Arena" class="w-full h-auto object-cover mb-6 rounded-lg" />
+                        
+                        <h3 class="mb-2 text-2xl font-bold uppercase">Virtual Reality Arena</h3>
+
+                        <p class="leading-relaxed text-gray-700 dark:text-gray-300">Immerse yourself in other worlds with our cutting-edge VR setups. A truly unforgettable experience for solo or group play.</p>
+
+                                                    <a href="/services/vr-arena" class="inline-block px-6 py-2 mt-6 font-bold text-font-primary bg-indigo-600 transition-colors hover:bg-indigo-700 rounded-lg">
+                                Learn More
+                            </a>
+                                            </div>
+                                    <div class="bg-primary-dark-50 dark:bg-primary-dark-800 border border-gray-200 dark:border-gray-700 p-8 hover:border-indigo-500 dark:hover:border-indigo-400 transition-colors rounded-lg shadow-lg">
+                                                    <img src="https://placehold.co/600x450/111827/dc2626?text=Private+Events" alt="Private Events &amp; Parties" class="w-full h-auto object-cover mb-6 rounded-lg" />
+                        
+                        <h3 class="mb-2 text-2xl font-bold uppercase">Private Events &amp; Parties</h3>
+
+                        <p class="leading-relaxed text-gray-700 dark:text-gray-300">Host your next birthday party, corporate event, or private tournament at Cyberia. We offer custom packages to make your event a hit.</p>
+
+                                                    <a href="/services/private-events" class="inline-block px-6 py-2 mt-6 font-bold text-font-primary bg-indigo-600 transition-colors hover:bg-indigo-700 rounded-lg">
+                                Learn More
+                            </a>
+                                            </div>
+                            </div>
+        
+            </div>
+</section>
+
+        <!-- Image Grid (Logos) Modified for CI Web Group Aesthetic -->
+<section class="py-16 px-4 md:py-24 bg-primary-inverted font-sans" style="--color-primary: #f3f4f6; --color-text: #111827; --color-muted: #4b5563; --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif;--font-heading: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif;">
+    <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-center uppercase text-font-primary">Gaming Community</h2>
+                            <p class="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">Join our vibrant community of gamers</p>
+                
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+                                    <div class="p-4">
+                        <img src="https://placehold.co/400x400/111827/dc2626?text=Community" alt="Gamers playing together" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                                    <div class="p-4">
+                        <img src="https://placehold.co/400x400/111827/dc2626?text=Tournaments" alt="Trophy for a tournament" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                                    <div class="p-4">
+                        <img src="https://placehold.co/400x400/111827/dc2626?text=Events" alt="People at a gaming event" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                                    <div class="p-4">
+                        <img src="https://placehold.co/400x400/111827/dc2626?text=Lounge" alt="Comfortable gaming lounge" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                            </div>
+                
+            </div>
+</section>
+
+        <!-- Pricing Section (Repurposed for Team) using custom Tailwind semantic color classes -->
+<section id="team" class="py-16 md:py-24 px-4 text-font-primary bg-surface-secondary font-body">
+    <div class="container px-4 mx-auto">
+        <h2 class="mb-4 text-3xl font-extrabold text-center md:text-4xl uppercase text-primary-500">Choose Your Plan</h2>
+                    <p class="mx-auto mb-12 max-w-2xl text-center text-neutral-400">Flexible options for every gamer</p>
+        
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                                    <div class="bg-neutral-800 p-6 flex flex-col items-center text-center rounded-lg">
+                        
+                        <h3 class="mb-1 text-2xl font-bold text-primary-700">Standard Plan</h3>
+
+                        
+                        <a href="#" class="text-accent-content font-bold py-2 px-5 w-full transition-colors bg-accent-500 hover:bg-accent-700 rounded-lg">
+                            Choose Standard
+                        </a>
+                    </div>
+                                    <div class="bg-neutral-800 p-6 flex flex-col items-center text-center rounded-lg">
+                        
+                        <h3 class="mb-1 text-2xl font-bold text-primary-700">Premium Plan</h3>
+
+                        
+                        <a href="#" class="text-accent-content font-bold py-2 px-5 w-full transition-colors bg-accent-500 hover:bg-accent-700 rounded-lg">
+                            Choose Premium
+                        </a>
+                    </div>
+                                    <div class="bg-neutral-800 p-6 flex flex-col items-center text-center rounded-lg">
+                        
+                        <h3 class="mb-1 text-2xl font-bold text-primary-700">Ultimate Plan</h3>
+
+                        
+                        <a href="#" class="text-accent-content font-bold py-2 px-5 w-full transition-colors bg-accent-500 hover:bg-accent-700 rounded-lg">
+                            Choose Ultimate
+                        </a>
+                    </div>
+                            </div>
+        
+            </div>
+</section>
+
+        <!-- Promotions Section using custom Tailwind semantic color classes -->
+<section class="py-16 px-4 md:py-24 text-neutral-content bg-neutral-900 font-body">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-center uppercase text-primary-500">Special Offers</h2>
+                    <p class="text-lg mb-12 text-center max-w-3xl mx-auto text-neutral-400">Limited time deals for our community</p>
+        
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="text-center flex flex-col items-center">
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase text-primary-700">Student Discount</h3>
+                        
+                                                    <p class="text-neutral-400">20% off for students with valid ID</p>
+                                            </div>
+                                    <div class="text-center flex flex-col items-center">
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase text-primary-700">Weekend Warriors</h3>
+                        
+                                                    <p class="text-neutral-400">Buy 2 hours, get 1 free on weekends</p>
+                                            </div>
+                            </div>
+        
+            </div>
+</section>
+
+        <!-- CTA Section using semantic Tailwind/daisyUI color classes -->
+<section class="py-16 px-4 md:py-24 text-font-primary bg-primary-inverted font-sans ">
+    <div class="container mx-auto">
+        <div class="text-center">
+                            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase text-primary-content">
+                    Ready to Game?
+                </h2>
+                                    <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90 text-primary-content">
+                        Join our community today
+                    </p>
+                            
+                            <a href="#contact" class="text-font-primary bg-surface-brand-primary px-8 py-3 font-bold uppercase rounded-md">
+                    Get Started Today
+                </a>
+            
+                    </div>
+    </div>
+</section>
+
+        <!-- Enhanced Content Section -->
+<section class="py-16 text-font-primary bg-primary-inverted font-body ">
+    <div class="container mx-auto px-4">
+                    <div class="text-left">
+                                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-700" style="font-family: var(--font-heading, system-ui);">
+                                                    About Cyberia Gaming Lounge
+                                            </h2>
+                
+                                    <div class="text-lg leading-relaxed text-primary" style="font-family: var(--font-body, system-ui);">
+                        <p>Cyberia Gaming Lounge is more than just a gaming center - it's a community hub where gamers of all levels come together to share their passion for gaming. Our state-of-the-art facilities feature the latest gaming technology, comfortable seating, and a welcoming atmosphere that makes everyone feel at home.</p><p>Whether you're a casual gamer looking for some fun or a competitive player seeking the ultimate gaming experience, Cyberia has everything you need to take your gaming to the next level.</p>
+                    </div>
+                
+                            </div>
+        
+    </div>
+</section>
+        <!-- Features Grid using semantic Tailwind/daisyUI color classes -->
+<section class="py-16 px-4 md:py-24 bg-primary-inverted font-body ">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-center uppercase text-primary-700">Why Choose Cyberia?</h2>
+                    <p class="text-lg text-neutral-600 mb-12 text-center max-w-3xl mx-auto">The ultimate gaming experience</p>
+        
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                    <div class="text-center p-6 relative overflow-hidden bg-neutral-100 rounded-lg">
+                                                    <div class="w-16 h-16 mx-auto mb-6 relative z-10 text-accent-600">
+                                                                    <i class="computer fa-3x"></i>
+                                                            </div>
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase relative z-10 text-primary-700">High-End Equipment</h3>
+                        
+                                                    <p class="text-neutral-700 relative z-10">Latest RTX graphics cards and high-refresh monitors</p>
+                                            </div>
+                                    <div class="text-center p-6 relative overflow-hidden bg-neutral-100 rounded-lg">
+                                                    <div class="w-16 h-16 mx-auto mb-6 relative z-10 text-accent-600">
+                                                                    <i class="support fa-3x"></i>
+                                                            </div>
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase relative z-10 text-primary-700">24/7 Support</h3>
+                        
+                                                    <p class="text-neutral-700 relative z-10">Round-the-clock technical support and assistance</p>
+                                            </div>
+                                    <div class="text-center p-6 relative overflow-hidden bg-neutral-100 rounded-lg">
+                                                    <div class="w-16 h-16 mx-auto mb-6 relative z-10 text-accent-600">
+                                                                    <i class="users fa-3x"></i>
+                                                            </div>
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase relative z-10 text-primary-700">Community Events</h3>
+                        
+                                                    <p class="text-neutral-700 relative z-10">Regular tournaments, meetups, and gaming events</p>
+                                            </div>
+                                    <div class="text-center p-6 relative overflow-hidden bg-neutral-100 rounded-lg">
+                                                    <div class="w-16 h-16 mx-auto mb-6 relative z-10 text-accent-600">
+                                                                    <i class="comfort fa-3x"></i>
+                                                            </div>
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase relative z-10 text-primary-700">Comfortable Environment</h3>
+                        
+                                                    <p class="text-neutral-700 relative z-10">Ergonomic chairs and climate-controlled spaces</p>
+                                            </div>
+                                    <div class="text-center p-6 relative overflow-hidden bg-neutral-100 rounded-lg">
+                                                    <div class="w-16 h-16 mx-auto mb-6 relative z-10 text-accent-600">
+                                                                    <i class="wifi fa-3x"></i>
+                                                            </div>
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase relative z-10 text-primary-700">Fast Internet</h3>
+                        
+                                                    <p class="text-neutral-700 relative z-10">Gigabit fiber internet for lag-free gaming</p>
+                                            </div>
+                                    <div class="text-center p-6 relative overflow-hidden bg-neutral-100 rounded-lg">
+                                                    <div class="w-16 h-16 mx-auto mb-6 relative z-10 text-accent-600">
+                                                                    <i class="food fa-3x"></i>
+                                                            </div>
+                        
+                                                    <h3 class="text-xl font-bold mb-2 uppercase relative z-10 text-primary-700">Food &amp; Drinks</h3>
+                        
+                                                    <p class="text-neutral-700 relative z-10">Snacks, drinks, and gaming fuel available</p>
+                                            </div>
+                            </div>
+        
+            </div>
+</section>
+
+        <!-- Store Finder Section -->
+<section class="py-16 text-base-content bg-base-100 font-body">
+    <div class="container mx-auto px-4">
+                                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-primary-700">
+                                            Find Our Gaming Lounges
+                                    </h2>
+                        
+                            <p class="text-lg text-neutral-600 mb-8 text-center max-w-2xl mx-auto">
+                                            Visit us at one of our convenient locations near you.
+                                    </p>
+                        
+                            <p class="text-base text-neutral-600 mb-12 text-center max-w-3xl mx-auto">
+                                            Discover our gaming lounges and find the perfect location for your next gaming session.
+                                    </p>
+                            
+                    <div class="flex flex-col gap-4 justify-center mb-8 md:flex-row">
+                                    <div class="relative">
+                        <input 
+                            type="text" 
+                            id="location-search" 
+                            placeholder="Search locations..."
+                            class="py-2 pr-4 pl-10 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent"
+                        >
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3">
+                            <svg class="w-5 h-5 text-base-content/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                                
+                                    <select id="city-filter" class="px-4 py-2 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-accent-500 focus:border-transparent">
+                        <option value="">All Cities</option>
+                                                    <option value="Downtown">Downtown</option>
+                                                    <option value="Eastside">Eastside</option>
+                                                    <option value="Westside">Westside</option>
+                                            </select>
+                            </div>
+                
+                    <!-- Locations Grid/List -->
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 " id="locations-list">
+                                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow location-card" data-location-index="0">
+                                                    <div class="flex items-start space-x-4">
+                                                                    <img src="https://placehold.co/400x300/111827/dc2626?text=Downtown+Location" alt="Cyberia Downtown" class="object-cover w-20 h-20 rounded-lg">
+                                                                
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                                                                    <h3 class="text-xl font-semibold">Cyberia Downtown</h3>
+                                                                                
+                                                                                    <span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-success text-success-content">
+                                                Open
+                                            </span>
+                                                                            </div>
+                                    
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            </svg>
+                                            123 Gaming Street, Downtown
+                                        </p>
+                                                                        
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                            </svg>
+                                            <a href="tel:(555) 123-4567" class="text-accent hover:text-accent-content">(555) 123-4567</a>
+                                        </p>
+                                                                        
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            Mon-Sun: 10AM - 2AM
+                                        </p>
+                                                                        
+                                                                            <div class="mb-3">
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">High-end PCs</span>
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">VR Arena</span>
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">Tournament Space</span>
+                                                                                    </div>
+                                                                        
+                                                                            <a href="https://maps.google.com" target="_blank" 
+                                           class="inline-flex items-center px-4 py-2 text-white bg-accent-600 rounded-lg transition-colors hover:bg-accent-700">
+                                            <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                                            </svg>
+                                            Get Directions
+                                        </a>
+                                                                    </div>
+                            </div>
+                                            </div>
+                                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow location-card" data-location-index="1">
+                                                    <div class="flex items-start space-x-4">
+                                                                    <img src="https://placehold.co/400x300/111827/dc2626?text=Westside+Location" alt="Cyberia Westside" class="object-cover w-20 h-20 rounded-lg">
+                                                                
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                                                                    <h3 class="text-xl font-semibold">Cyberia Westside</h3>
+                                                                                
+                                                                                    <span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-success text-success-content">
+                                                Open
+                                            </span>
+                                                                            </div>
+                                    
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            </svg>
+                                            456 Tech Avenue, Westside
+                                        </p>
+                                                                        
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                            </svg>
+                                            <a href="tel:(555) 987-6543" class="text-accent hover:text-accent-content">(555) 987-6543</a>
+                                        </p>
+                                                                        
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            Mon-Sun: 11AM - 1AM
+                                        </p>
+                                                                        
+                                                                            <div class="mb-3">
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">Gaming PCs</span>
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">Console Gaming</span>
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">Private Rooms</span>
+                                                                                    </div>
+                                                                        
+                                                                            <a href="https://maps.google.com" target="_blank" 
+                                           class="inline-flex items-center px-4 py-2 text-white bg-accent-600 rounded-lg transition-colors hover:bg-accent-700">
+                                            <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                                            </svg>
+                                            Get Directions
+                                        </a>
+                                                                    </div>
+                            </div>
+                                            </div>
+                                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow location-card" data-location-index="2">
+                                                    <div class="flex items-start space-x-4">
+                                                                    <img src="https://placehold.co/400x300/111827/dc2626?text=Eastside+Location" alt="Cyberia Eastside" class="object-cover w-20 h-20 rounded-lg">
+                                                                
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                                                                    <h3 class="text-xl font-semibold">Cyberia Eastside</h3>
+                                                                                
+                                                                                    <span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-warning text-warning-content">
+                                                Coming soon
+                                            </span>
+                                                                            </div>
+                                    
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            </svg>
+                                            789 Digital Blvd, Eastside
+                                        </p>
+                                                                        
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                            </svg>
+                                            <a href="tel:(555) 456-7890" class="text-accent hover:text-accent-content">(555) 456-7890</a>
+                                        </p>
+                                                                        
+                                                                            <p class="mb-2 text-base-content/70">
+                                            <svg class="inline mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            Mon-Sun: 12PM - 12AM
+                                        </p>
+                                                                        
+                                                                            <div class="mb-3">
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">VR Gaming</span>
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">Esports Arena</span>
+                                                                                            <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 rounded-md mr-2 mb-2">Food &amp; Drinks</span>
+                                                                                    </div>
+                                                                        
+                                                                            <a href="https://maps.google.com" target="_blank" 
+                                           class="inline-flex items-center px-4 py-2 text-white bg-accent-600 rounded-lg transition-colors hover:bg-accent-700">
+                                            <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                                            </svg>
+                                            Get Directions
+                                        </a>
+                                                                    </div>
+                            </div>
+                                            </div>
+                            </div>
+            
+            <!-- Separate Map Section -->
+                            <div class="mt-12">
+                                            <div class="w-full rounded-lg shadow-lg h-96" id="store-map">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28e119a%3A0x7f0d0c3b3b3b3b3b!2s123%20Gaming%20Street!5e0!3m2!1sen!2sus!4v1234567890" class="w-full h-full rounded-lg" frameborder="0" allowfullscreen></iframe>
+                                                    </div>
+                                    </div>
+                            
+            </div>
+</section>
+
+        </main>
+
+    <!-- Footer using Tailwind/daisyUI semantic colors only -->
+<footer class="py-12 px-4 text-font-primary bg-primary-inverted font-sans">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="md:col-span-2 lg:col-span-1 block">
+                <h3 class="text-2xl font-extrabold mb-2 uppercase">CYBERIA Gaming Lounge</h3>
+                                    <p class="text-sm">123 Gaming Street, Cyber City, CC 12345</p>
+                                                    <p class="text-sm">+1 (555) 123-4567</p>
+                
+                <div class="w-full flex justify-center mt-4">
+    <iframe
+        width="600"
+        height="450"
+        class="rounded-lg shadow-lg border border-[var(--border-tretinary)]"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUIz4JfDWIGqKZDi0YRmZy_lBFzgeAav8&q=123+Gaming+Street%2C+Cyber+City%2C+CC+12345">
+    </iframe>
+</div>
+                                    <div class="flex space-x-3">
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                                <i class="fab fa-discord fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+                                <i class="fab fa-twitch fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                                                    <a href="#" class="p-2 text-neutral-400 hover:text-accent-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube fa-lg"></i>
+                            </a>
+                                            </div>
+                            </div>
+
+            <!-- Footer Sections -->
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Gaming</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/services/gaming-pcs" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Gaming PCs
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/vr-arena" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    VR Arena
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/tournaments" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Tournaments
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/events" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Events
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Services</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/services/repair" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    PC Repair
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/upgrades" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Upgrades
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/services/events" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Private Events
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/memberships" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Memberships
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Community</h4>
+                    <ul class="space-y-2">
+                                                    <li>
+                                <a href="/about" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    About Us
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/blog" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Blog
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/contact" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Contact
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="/privacy" class="text-sm transition-colors text-neutral-300 hover:text-accent-500">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            
+            <!-- Newsletter -->
+                            <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase">Stay Updated</h4>
+                    <p class="text-neutral-400 mb-6 mb-4">Get the latest gaming news, events, and exclusive offers delivered to your inbox.</p>
+                    <form class="flex flex-col gap-2 sm:flex-row">
+                        <input type="email" placeholder="Enter your email address" class="input input-bordered w-full text-neutral-50 bg-neutral-800 rounded-md border border-neutral-800 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent" required>
+                        <button type="submit" class="btn btn-accent px-4 py-2 font-bold text-neutral-50 rounded-md transition-colors hover:bg-accent-600">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+                    </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 pt-8 border-t border-neutral-800 text-center">
+            <p class="text-sm text-neutral-500">
+                © 2025 CYBERIA Gaming Lounge. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Mobile Menu Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBtn = document.getElementById('menu-btn');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const body = document.body;
+
+        if (!mobileMenu || !menuBtn) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+
+        let isOpen = false;
+        let focusTrap = null;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+                    }
+
+        function openMenu() {
+            isOpen = true;
+                            mobileMenu.style.opacity = '0';
+                mobileMenu.style.display = 'block';
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.style.transition = 'opacity 300ms ease-in-out';
+                    mobileMenu.style.opacity = '1';
+                }, 10);
+            
+            if (openIcon) openIcon.classList.add('hidden');
+            if (closeIcon) closeIcon.classList.remove('hidden');
+
+            menuBtn.classList.add('active');
+            mobileMenu.classList.add('active');
+            menuBtn.setAttribute('aria-expanded', 'true');
+
+                            body.style.overflow = 'hidden';
+            
+                            const focusableElements = mobileMenu.querySelectorAll('.mobile-menu-content a, .mobile-menu-content button, .mobile-menu-content input, .mobile-menu-content select, .mobile-menu-content textarea, .mobile-menu-content [tabindex]:not([tabindex="-1"])');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                if (firstElement) firstElement.focus();
+                focusTrap = function(e) {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstElement) {
+                                e.preventDefault();
+                                lastElement.focus();
+                            }
+                        } else {
+                            if (document.activeElement === lastElement) {
+                                e.preventDefault();
+                                firstElement.focus();
+                            }
+                        }
+                    }
+                };
+                mobileMenu.addEventListener('keydown', focusTrap);
+            
+            window.dispatchEvent(new CustomEvent('mobileMenuOpen', { detail: { menu: mobileMenu } }));
+                    }
+
+        function closeMenu() {
+            isOpen = false;
+                            mobileMenu.style.transition = 'opacity 300ms ease-in-out';
+                mobileMenu.style.opacity = '0';
+                setTimeout(() => {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            
+            if (openIcon) openIcon.classList.remove('hidden');
+            if (closeIcon) closeIcon.classList.add('hidden');
+
+            menuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+
+                            body.style.overflow = '';
+            
+                            if (focusTrap) {
+                    mobileMenu.removeEventListener('keydown', focusTrap);
+                    focusTrap = null;
+                }
+            
+            window.dispatchEvent(new CustomEvent('mobileMenuClose', { detail: { menu: mobileMenu } }));
+                    }
+
+        menuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+                    const navLinks = mobileMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (!this.getAttribute('data-dropdown-toggle')) {
+                        setTimeout(() => closeMenu(), 100);
+                    }
+                });
+            });
+        
+                    document.addEventListener('click', function(e) {
+                if (isOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+        
+                    document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && isOpen) {
+                    closeMenu();
+                }
+            });
+        
+                    window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768 && isOpen) {
+                    closeMenu();
+                }
+            });
+        
+        
+        if (mobileMenu.classList.contains('hidden')) {
+            closeMenu();
+        }
+    });
+</script>
+
+ 
+    </main>
+
+    
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/badger-accordion@1.2.4/dist/badger-accordion.min.js"></script>
+
+            
+        <script type="module" src="media/app.js"></script>
+            <script>
+        // Store finder functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationCards = document.querySelectorAll('.location-card');
+            const searchInput = document.getElementById('location-search');
+            const cityFilter = document.getElementById('city-filter');
+            
+            function filterLocations() {
+                const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+                const selectedCity = cityFilter ? cityFilter.value : '';
+                
+                locationCards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    const matchesSearch = !searchTerm || cardText.includes(searchTerm);
+                    const matchesCity = !selectedCity || cardText.includes(selectedCity.toLowerCase());
+                    
+                    card.style.display = matchesSearch && matchesCity ? 'block' : 'none';
+                });
+            }
+            
+            if (searchInput) {
+                searchInput.addEventListener('input', filterLocations);
+            }
+            
+            if (cityFilter) {
+                cityFilter.addEventListener('change', filterLocations);
+            }
+        });
+    </script>
+     
+</body>
+</html>
+
